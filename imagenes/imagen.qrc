@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="p">
+    <file>azp.jpg</file>
+    <file>azulp.jpg</file>
+    <file>bluep.jpg</file>
+    <file>CONp.png</file>
+    <file>emp.png</file>
+    <file>emtelcop.jpg</file>
+    <file>emtp.jpg</file>
+    <file>FFp.jpg</file>
+    <file>FONDOp.jpg</file>
+    <file>fondp.png</file>
+    <file>FOp.jpg</file>
+    <file>FOsp.png</file>
+    <file>fp.png</file>
+    <file>imagen.qrc</file>
+    <file>imagenp.jpg</file>
+    <file>logoep.png</file>
+    <file>Logo-footerp.png</file>
+    <file>LOGOp.jpg</file>
+    <file>Logop.png</file>
+    <file>unp.jpg</file>
+    <file>Up.png</file>
+  </qresource>
+</RCC>
