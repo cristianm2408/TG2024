@@ -50,11 +50,19 @@ class Ventana(QDialog):
             mBox = QMessageBox()
             mBox.setText("Debe seleccionar un usuario")
             mBox.exec()
+        elif self.v.tipo.currentText() =="---Seleccione una opción":
+            mBox = QMessageBox()
+            mBox.setText("Debe seleccionar tipo de documento")
+            mBox.exec()
+        elif len(self.v.ndo.text())<4:
+            mBox = QMessageBox()
+            mBox.setText("Debe ingresar número de documento válido")
+            mBox.exec()
         elif self.v.tarea.currentText() =="---Seleccione una opción":
             mBox = QMessageBox()
             mBox.setText("Debe seleccionar tipo de tarea")
             mBox.exec()
-        elif len(self.v.nso.text())<4:
+        elif not self.v.nso.text().isnumeric():
             mBox = QMessageBox()
             mBox.setText("Debe ingresar número válido")
             mBox.exec()

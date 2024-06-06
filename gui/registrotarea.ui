@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>615</width>
-    <height>777</height>
+    <width>642</width>
+    <height>805</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(203, 203, 203);</string>
+   <string notr="true">background-color: rgb(194, 194, 194);</string>
   </property>
   <widget class="QLabel" name="logo">
    <property name="geometry">
@@ -58,8 +58,8 @@
   <widget class="QComboBox" name="usu">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>170</y>
+     <x>170</x>
+     <y>120</y>
      <width>261</width>
      <height>31</height>
     </rect>
@@ -70,11 +70,11 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
    </property>
    <item>
     <property name="text">
-     <string>--Seleccione una opción</string>
+     <string>---Seleccione una opción</string>
     </property>
    </item>
    <item>
@@ -91,8 +91,8 @@
   <widget class="QLabel" name="tusu">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>130</y>
+     <x>220</x>
+     <y>80</y>
      <width>181</width>
      <height>16</height>
     </rect>
@@ -115,7 +115,7 @@
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>300</y>
+     <y>320</y>
      <width>241</width>
      <height>31</height>
     </rect>
@@ -125,7 +125,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">border-bottom-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
+background-color: rgb(232, 232, 232);
 border-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
@@ -139,7 +139,7 @@ border-left-color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>300</y>
+     <y>320</y>
      <width>261</width>
      <height>31</height>
     </rect>
@@ -150,7 +150,7 @@ border-left-color: rgb(0, 0, 0);</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
    </property>
    <item>
     <property name="text">
@@ -192,7 +192,7 @@ border-left-color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>260</y>
+     <y>280</y>
      <width>151</width>
      <height>31</height>
     </rect>
@@ -211,8 +211,8 @@ border-left-color: rgb(0, 0, 0);</string>
   <widget class="QLabel" name="ns">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>260</y>
+     <x>340</x>
+     <y>290</y>
      <width>221</width>
      <height>16</height>
     </rect>
@@ -232,8 +232,8 @@ border-left-color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>400</y>
-     <width>571</width>
+     <y>420</y>
+     <width>621</width>
      <height>291</height>
     </rect>
    </property>
@@ -250,7 +250,7 @@ border-left-color: rgb(0, 0, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border-bottom-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
+background-color: rgb(232, 232, 232);
 border-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
@@ -267,7 +267,7 @@ border-left-color: rgb(0, 0, 0);</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>360</y>
+     <y>390</y>
      <width>181</width>
      <height>16</height>
     </rect>
@@ -286,8 +286,8 @@ border-left-color: rgb(0, 0, 0);</string>
   <widget class="QPushButton" name="reg">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>700</y>
+     <x>440</x>
+     <y>740</y>
      <width>131</width>
      <height>51</height>
     </rect>
@@ -308,6 +308,148 @@ border-radius:8px</string>
    </property>
    <property name="text">
     <string>REGISTRAR</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ttipo">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Tipo de documento</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="tipo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>---Seleccione una opción</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CC - Cédula de Ciudadanía</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TI - Tarjeta de Identidad</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>RC - Registro Civil</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="ndo">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>220</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-bottom-color: rgb(137, 206, 206);
+background-color: rgb(232, 232, 232);
+border-color: rgb(137, 206, 206);
+border-top-color: rgb(137, 206, 206);
+border-right-color: rgb(137, 206, 206);
+border-left-color: rgb(137, 206, 206);</string>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nd">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>190</y>
+     <width>241</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Número de documento</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="rea">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>750</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Tarea realizada</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="val">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>750</y>
+     <width>221</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Tarea en validación</string>
    </property>
   </widget>
  </widget>
