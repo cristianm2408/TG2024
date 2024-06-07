@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="p">
+    <file>TAREA.jpg</file>
     <file>azp.jpg</file>
     <file>azulp.jpg</file>
     <file>bluep.jpg</file>
