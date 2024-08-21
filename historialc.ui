@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>historial</class>
+ <widget class="QDialog" name="historial">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1319</width>
+    <height>805</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>1</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="log">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>141</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/FOsp.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="registro">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>20</y>
+     <width>461</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Black</family>
+     <pointsize>19</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>HISTORIAL DE TAREAS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buscarv">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>300</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(123, 221, 221);
+border-radius:8px</string>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vlan">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>180</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>VLAN-Campaña</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="fonhis">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-20</y>
+     <width>1331</width>
+     <height>931</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Lucida Bright</family>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/TAREA.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="hdesdev">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>230</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2024</year>
+     <month>1</month>
+     <day>1</day>
+    </datetime>
+   </property>
+   <property name="displayFormat">
+    <string>d/MM/yyyy</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vdesde">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>180</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Desde</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vhasta">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>180</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Hasta</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="hhastav">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>230</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2024</year>
+     <month>1</month>
+     <day>1</day>
+    </datetime>
+   </property>
+   <property name="displayFormat">
+    <string>d/MM/yyyy</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tablav">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>380</y>
+     <width>1280</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1280</width>
+     <height>401</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1041</width>
+     <height>401</height>
+    </size>
+   </property>
+   <property name="sizeIncrement">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="lineWidth">
+    <number>15</number>
+   </property>
+   <property name="autoScroll">
+    <bool>true</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>23</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="horizontalScrollMode">
+    <enum>QAbstractItemView::ScrollPerPixel</enum>
+   </property>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>132</number>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>87</number>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>66</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Usuario</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>No. Documento</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>VLAN</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Tipo Tarea</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>No. Tarea</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Detalle</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Realizada</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Fecha</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="texto">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>120</y>
+     <width>811</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Buscar tareas teniendo en cuenta VLAN-Campaña y fecha de registro</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="nvlan">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>230</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>---Seleccione una opción</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ADMINISTRACIÓN 104</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ADDI 948</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ALKOSTO 939</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BBVA 947</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TUYABOG  916</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>KERALTY 906</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>JUAN VALDEZ 983</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>RECAUDOBOG 938</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PREVISORA 944</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PARMALAT 995</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TUBOLETA 962</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PAPA JOHNS 963</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>NOVONORDISK 966</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SALUD TOTAL 904</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COLPENSIONES 978</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CONINSA 980</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>OTRA</string>
+    </property>
+   </item>
+  </widget>
+  <zorder>fonhis</zorder>
+  <zorder>log</zorder>
+  <zorder>registro</zorder>
+  <zorder>buscarv</zorder>
+  <zorder>vlan</zorder>
+  <zorder>hdesdev</zorder>
+  <zorder>vdesde</zorder>
+  <zorder>vhasta</zorder>
+  <zorder>hhastav</zorder>
+  <zorder>tablav</zorder>
+  <zorder>texto</zorder>
+  <zorder>nvlan</zorder>
+ </widget>
+ <resources>
+  <include location="imagenes/imagen.qrc"/>
+  <include location="imagenes/imagen.qrc"/>
+ </resources>
+ <connections/>
+</ui>

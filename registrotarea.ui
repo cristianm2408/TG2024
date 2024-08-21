@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Registro</class>
+ <widget class="QDialog" name="Registro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>655</width>
+    <height>778</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>1</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="logo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>131</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/FOsp.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="registro">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>30</y>
+     <width>431</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Black</family>
+     <pointsize>23</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>REGISTRO DE TAREAS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tusu">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Usuario</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nso">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>300</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-bottom-color: rgb(0, 0, 0);
+background-color: rgb(232, 232, 232);
+border-color: rgb(0, 0, 0);
+border-top-color: rgb(0, 0, 0);
+border-right-color: rgb(0, 0, 0);
+border-left-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="tarea">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>300</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>---Seleccione una opción</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Verificación puerto</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Asignación VLAN</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Activación  puertos</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Desactivación de puertos</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Port security</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Otros</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="ttarea">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>250</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Tipo de tarea</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ns">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>250</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Número de Ticket</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dt">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>350</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Detalles de tarea</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="reg">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>690</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(197, 220, 75);
+border-radius:8px</string>
+   </property>
+   <property name="text">
+    <string>REGISTRAR</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tvlan">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>160</y>
+     <width>221</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>VLAN-Campaña</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="rea">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>680</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Tarea realizada</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="val">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>699</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Tarea en validación</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="rvlan">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>200</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>---Seleccione una opción</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ADMINISTRACIÓN </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ADDI </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ALKOSTO </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BBVA </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TUYABOG  </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>KERALTY </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>JUAN VALDEZ </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PREVISORA </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PARMALAT </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TUBOLETA </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PAPA JOHNS </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>NOVONORDISK </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SALUD TOTAL </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COLPENSIONES </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COLMEDICA</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CONINSA </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>OTRA</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="usu">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>200</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-bottom-color: rgb(137, 206, 206);
+background-color: rgb(232, 232, 232);
+border-color: rgb(137, 206, 206);
+border-top-color: rgb(137, 206, 206);
+border-right-color: rgb(137, 206, 206);
+border-left-color: rgb(137, 206, 206);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="det">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>410</y>
+     <width>401</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-bottom-color: rgb(137, 206, 206);
+background-color: rgb(232, 232, 232);
+border-color: rgb(137, 206, 206);
+border-top-color: rgb(137, 206, 206);
+border-right-color: rgb(137, 206, 206);
+border-left-color: rgb(137, 206, 206);</string>
+   </property>
+   <property name="plainText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="equipos">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>350</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Equipos </string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="equi">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>410</y>
+     <width>131</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-bottom-color: rgb(137, 206, 206);
+background-color: rgb(232, 232, 232);
+border-color: rgb(137, 206, 206);
+border-top-color: rgb(137, 206, 206);
+border-right-color: rgb(137, 206, 206);
+border-left-color: rgb(137, 206, 206);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="fon">
+   <property name="geometry">
+    <rect>
+     <x>-60</x>
+     <y>-30</y>
+     <width>721</width>
+     <height>821</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/gra.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>fon</zorder>
+  <zorder>logo</zorder>
+  <zorder>registro</zorder>
+  <zorder>tusu</zorder>
+  <zorder>nso</zorder>
+  <zorder>tarea</zorder>
+  <zorder>ttarea</zorder>
+  <zorder>ns</zorder>
+  <zorder>dt</zorder>
+  <zorder>reg</zorder>
+  <zorder>tvlan</zorder>
+  <zorder>rea</zorder>
+  <zorder>val</zorder>
+  <zorder>rvlan</zorder>
+  <zorder>usu</zorder>
+  <zorder>det</zorder>
+  <zorder>equipos</zorder>
+  <zorder>equi</zorder>
+ </widget>
+ <resources>
+  <include location="imagenes/imagen.qrc"/>
+ </resources>
+ <connections/>
+</ui>

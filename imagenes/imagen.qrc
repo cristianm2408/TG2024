@@ -1,5 +1,16 @@
 <RCC>
   <qresource prefix="p">
+    <file>gra.png</file>
+    <file>fonda.png</file>
+    <file>lu.png</file>
+    <file>rue.jpg</file>
+    <file>fig.png</file>
+    <file>tecn.jpg</file>
+    <file>regisfon.png</file>
+    <file>regis.png</file>
+    <file>verd.jpg</file>
+    <file>manual.png</file>
+    <file>8083308.png</file>
     <file>TAREA.jpg</file>
     <file>azp.jpg</file>
     <file>azulp.jpg</file>
