@@ -10,14 +10,13 @@ class Tareadata():
             self.db = con.Conexion().conectar()
             self.cursor = self.db.cursor()
             sql_create_tareas = """ CREATE TABLE IF NOT EXISTS tareas
-            (id INTEGER PRIMARY KEY AUTOINCREMENT,
-            usuario TEXT,
+            (usuario TEXT,
             vlan TEXT,
-            tipod TEXT,
-            numd NUMERIC,
             tipot TEXT,
             numt NUMERIC,
+            equipos NUMERIC,
             detalle TEXT,
+            detalles TEXT,
             realizado BOOLEAN,
             validacion BOOLEAN,
             fecha DATETIME)"""
@@ -40,8 +39,8 @@ class Tareadata():
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()
       self.cursor.execute("""
-      INSERT INTO tareas VALUES(null,'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')
-      """.format(info._usuario,info._vlan,info._tipod,info._numd,info._tipot,info._ticket,info._detalle,info._realizada,info._validacion,fecha))
+      INSERT INTO tareas VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')
+      """.format(info._usuario,info._vlan,info._tipot,info._ticket, info._equipos,info._detalle,info._detalles,info._realizada,info._validacion,fecha))
       self.db.commit()
       if self.cursor.rowcount ==1:
          return True

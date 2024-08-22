@@ -280,17 +280,7 @@ border-radius:8px</string>
    </attribute>
    <column>
     <property name="text">
-     <string>ID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>Usuario</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>No. Documento</string>
     </property>
    </column>
    <column>
@@ -310,7 +300,17 @@ border-radius:8px</string>
    </column>
    <column>
     <property name="text">
-     <string>Detalle</string>
+     <string>Equipos</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Solicitud</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Solución</string>
     </property>
    </column>
    <column>

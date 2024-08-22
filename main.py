@@ -17,6 +17,8 @@ from PyQt6.QtWidgets import QLabel
 from PyQt6.QtWidgets import QWidget
 from PyQt6.QtWidgets import QVBoxLayout
 from PyQt6.QtCore import pyqtSignal
+from PyQt6.QtGui import QIcon
+
 
 import fitz 
 
@@ -24,6 +26,7 @@ import fitz
 
 from historial import Historialdata
 from tarea import Tareadata
+import tarea
 from tareas import Tarea
 
 
@@ -43,12 +46,16 @@ class Mainwindow():
         ImagE = QPixmap("imagenes/Logop.png")
         self.main.emtelco.setPixmap(ImagE)
 
+        ImagT = QPixmap("imagenes/regisfon.png")
+        icono = QIcon(ImagT)
+        self.main.regt.setIcon(icono)
+
      
         self.initGUI()
         self.main.show()
 
     def initGUI(self):
-        self.main.RegistrarT.triggered.connect(self.abrirregistro)
+        self.main.regt.clicked.connect(self.abrirregistro)
         self.main.buscaruf.triggered.connect(self.abrirhistorial)
         self.main.buscarf.triggered.connect(self.abrirhistorialf)
         self.main.buscarv.triggered.connect(self.abrirhistorialv)
@@ -79,7 +86,7 @@ class Mainwindow():
         self.registro.logo.setPixmap(ImagEM)
 
         self.registro.fon.setText("")
-        ImagEM = QPixmap("imagenes/gra.png")
+        ImagEM = QPixmap("imagenes/cla.png")
         self.registro.fon.setPixmap(ImagEM)
         
     
@@ -189,53 +196,39 @@ class Mainwindow():
 
 
    
-
 #####REGISTRAR TAREA ###
 
     def registrarTarea(self):
 
 
-        if self.registro.usu.text() =="Debe ingresar un usuario válido":
-            mBox = QMessageBox()
-            mBox.setText("Debe seleccionar un usuario")
-            mBox.exec()
-            self.registro.usu.setFocus()
-        elif self.registro.rvlan.currentText() =="---Seleccione una opción":
+    
+        if self.registro.rvlan.currentText() =="---Seleccione una opción":
             mBox = QMessageBox()
             mBox.setText("Debe seleccionar la campaña")
             mBox.exec()
             self.registro.rvlan.setFocus()
-        elif self.registro.tipo.currentText() =="---Seleccione una opción":
-            mBox = QMessageBox()
-            mBox.setText("Debe seleccionar tipo de documento")
-            mBox.exec()
-            self.registro.tipo.setFocus()
-        elif len(self.registro.ndo.text())<4:
-            mBox = QMessageBox()
-            mBox.setText("Debe ingresar número de documento válido")
-            mBox.exec()
-            self.registro.ndo.setFocus()
         elif self.registro.tarea.currentText() =="---Seleccione una opción":
             mBox = QMessageBox()
             mBox.setText("Debe seleccionar tipo de tarea")
             mBox.exec()
             self.registro.tarea.setFocus()
-        elif not self.registro.nso.text().isnumeric():
+        elif len(self.registro.nso.text())<4:
             mBox = QMessageBox()
-            mBox.setText("Debe ingresar número válido")
+            mBox.setText("Debe ingresar ticket válido")
             mBox.exec()
             self.registro.nso.setFocus()
+       
         else:
             
             tarea =  Tarea(
                 
                 usuario = self.registro.usu.text(),
                 vlan = self.registro.rvlan.currentText(),
-                tipod = self.registro.tipo.currentText(),
-                numd = float(self.registro.ndo.text()),
                 tipot = self.registro.tarea.currentText(),
                 ticket = float(self.registro.nso.text()),
-                detalle = self.registro.det.text(),
+                equipos = self.registro.equi.toPlainText(),
+                detalle = self.registro.det.toPlainText(),
+                detalles = self.registro.dets.toPlainText(),
                 realizada = self.registro.rea.isChecked(),
                 validacion = self.registro.val.isChecked(),
 
@@ -256,15 +249,14 @@ class Mainwindow():
     def limpiarcampos(self):
         self.registro.usu.setText("")
         self.registro.rvlan.setCurrentIndex(0)
-        self.registro.tipo.setCurrentIndex(0)
-        self.registro.ndo.setText("")
         self.registro.tarea.setCurrentIndex(0)
         self.registro.nso.setText("")
-        self.registro.det.setText("")
+        self.registro.equi.clear()
+        self.registro.det.clear()
+        self.registro.dets.clear()
         self.registro.rea.setChecked(False)
         self.registro.val.setChecked(False)
-        self.registro.ndo.setFocus()
-
+    
 
 
 

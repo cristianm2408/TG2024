@@ -156,19 +156,19 @@ class Ui_historial(object):
         self.hhasta.setText(QCoreApplication.translate("historial", u"Hasta", None))
         self.hhastaf.setDisplayFormat(QCoreApplication.translate("historial", u"d/MM/yyyy", None))
         ___qtablewidgetitem = self.tablatf.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("historial", u"ID", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("historial", u"Usuario", None));
         ___qtablewidgetitem1 = self.tablatf.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("historial", u"Usuario", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("historial", u"VLAN", None));
         ___qtablewidgetitem2 = self.tablatf.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("historial", u"No. Documento", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("historial", u"Tipo Tarea", None));
         ___qtablewidgetitem3 = self.tablatf.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("historial", u"VLAN", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("historial", u"No. Tarea", None));
         ___qtablewidgetitem4 = self.tablatf.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("historial", u"Tipo Tarea", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("historial", u"Equipos", None));
         ___qtablewidgetitem5 = self.tablatf.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("historial", u"No. Tarea", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("historial", u"Solicitud", None));
         ___qtablewidgetitem6 = self.tablatf.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("historial", u"Detalle", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("historial", u"Soluci\u00f3n", None));
         ___qtablewidgetitem7 = self.tablatf.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("historial", u"Realizada", None));
         ___qtablewidgetitem8 = self.tablatf.horizontalHeaderItem(8)

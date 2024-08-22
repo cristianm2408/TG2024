@@ -17,7 +17,8 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QMenu,
-    QMenuBar, QSizePolicy, QStatusBar, QWidget)
+    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
+    QWidget)
 import imagen_rc
 import imagen_rc
 
@@ -43,7 +44,7 @@ class Ui_Main(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.fondo = QLabel(self.centralwidget)
         self.fondo.setObjectName(u"fondo")
-        self.fondo.setGeometry(QRect(-110, -160, 2281, 1381))
+        self.fondo.setGeometry(QRect(-100, -160, 2281, 1381))
         self.fondo.setPixmap(QPixmap(u":/p/bluep.jpg"))
         self.fondo.setScaledContents(True)
         self.emtelco = QLabel(self.centralwidget)
@@ -51,6 +52,33 @@ class Ui_Main(object):
         self.emtelco.setGeometry(QRect(10, 20, 301, 101))
         self.emtelco.setPixmap(QPixmap(u":/p/Logop.png"))
         self.emtelco.setScaledContents(True)
+        self.regt = QPushButton(self.centralwidget)
+        self.regt.setObjectName(u"regt")
+        self.regt.setGeometry(QRect(140, 210, 161, 141))
+        self.regt.setCursor(QCursor(Qt.PointingHandCursor))
+        self.regt.setAutoFillBackground(False)
+        self.regt.setStyleSheet(u"\n"
+"QPushButton {\n"
+"    background-color: #3498db;\n"
+"    color: white;\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}")
+        icon = QIcon()
+        icon.addFile(u":/p/regisfon.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.regt.setIcon(icon)
+        self.regt.setIconSize(QSize(180, 150))
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(120, 160, 201, 31))
+        font = QFont()
+        font.setFamilies([u"Arial Black"])
+        font.setPointSize(11)
+        self.label.setFont(font)
         Main.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(Main)
         self.menubar.setObjectName(u"menubar")
@@ -94,6 +122,8 @@ class Ui_Main(object):
         self.buscarv.setText(QCoreApplication.translate("Main", u"Buscar por VLAN y fecha", None))
         self.fondo.setText("")
         self.emtelco.setText("")
+        self.regt.setText("")
+        self.label.setText(QCoreApplication.translate("Main", u"REGISTRAR TAREA", None))
         self.menuArchivo.setTitle(QCoreApplication.translate("Main", u"Archivo", None))
         self.menuHistorial_de_Tareas.setTitle(QCoreApplication.translate("Main", u"Historial de Tareas", None))
         self.menuinfo.setTitle(QCoreApplication.translate("Main", u"Info", None))
