@@ -4,6 +4,17 @@ from tareas import Tarea
 
 class Historialdata():
 
+   def basedatos(self, bdesde, bhasta):
+      self.db = con.Conexion().conectar()
+      self.cursor = self.db.cursor()
+      sqlbuscar = """
+      SELECT * FROM tareas  
+      WHERE fecha>='{}' AND fecha<='{}'
+      """.format(bdesde, bhasta)
+      res = self.cursor.execute(sqlbuscar)
+      data = res.fetchall()
+      return data
+
    def buscarfecha(self, usu, desde, hasta):
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()

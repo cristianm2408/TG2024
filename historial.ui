@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1319</width>
+    <width>1324</width>
     <height>805</height>
    </rect>
   </property>
@@ -128,7 +128,7 @@ border-radius:8px</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="imagenes/imagen.qrc">:/p/TAREA.jpg</pixmap>
+    <pixmap resource="imagenes/imagen.qrc">:/p/cla.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -240,19 +240,37 @@ border-radius:8px</string>
     <string>d/MM/yyyy</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>120</y>
+     <width>651</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Buscar tareas teniendo en cuenta el usuario y fecha de registro</string>
+   </property>
+  </widget>
   <widget class="QTableWidget" name="tablat">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>380</y>
-     <width>1280</width>
-     <height>401</height>
+     <x>0</x>
+     <y>400</y>
+     <width>1330</width>
+     <height>505</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
-     <width>1280</width>
-     <height>401</height>
+     <width>1330</width>
+     <height>505</height>
     </size>
    </property>
    <property name="maximumSize">
@@ -301,17 +319,7 @@ border-radius:8px</string>
    </attribute>
    <column>
     <property name="text">
-     <string>ID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>Usuario</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>No. Documento</string>
     </property>
    </column>
    <column>
@@ -331,7 +339,17 @@ border-radius:8px</string>
    </column>
    <column>
     <property name="text">
-     <string>Detalle</string>
+     <string>Equipos</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Solicitud</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Solución</string>
     </property>
    </column>
    <column>
@@ -345,55 +363,19 @@ border-radius:8px</string>
     </property>
    </column>
   </widget>
-  <widget class="QComboBox" name="cusu">
+  <widget class="QLineEdit" name="cusu">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>300</x>
      <y>230</y>
-     <width>261</width>
+     <width>231</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
     </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 232, 232);</string>
-   </property>
-   <item>
-    <property name="text">
-     <string>---Seleccione una opción</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Cristian Moreno</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Jefferson Vasquez</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>120</y>
-     <width>651</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>13</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Buscar tareas teniendo en cuenta el usuario y fecha de registro</string>
    </property>
   </widget>
   <zorder>fonhis</zorder>
@@ -405,9 +387,9 @@ border-radius:8px</string>
   <zorder>tdesde</zorder>
   <zorder>thasta</zorder>
   <zorder>fhasta</zorder>
+  <zorder>label</zorder>
   <zorder>tablat</zorder>
   <zorder>cusu</zorder>
-  <zorder>label</zorder>
  </widget>
  <resources>
   <include location="imagenes/imagen.qrc"/>

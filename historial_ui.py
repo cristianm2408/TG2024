@@ -15,8 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QAbstractItemView, QApplication, QComboBox, QDateEdit,
-    QDialog, QHeaderView, QLabel, QPushButton,
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QDateEdit, QDialog,
+    QHeaderView, QLabel, QLineEdit, QPushButton,
     QSizePolicy, QTableWidget, QTableWidgetItem, QWidget)
 import imagen_rc
 import imagen_rc
@@ -25,7 +25,7 @@ class Ui_historial(object):
     def setupUi(self, historial):
         if not historial.objectName():
             historial.setObjectName(u"historial")
-        historial.resize(1319, 805)
+        historial.resize(1324, 805)
         font = QFont()
         font.setPointSize(1)
         historial.setFont(font)
@@ -68,7 +68,7 @@ class Ui_historial(object):
         font4 = QFont()
         font4.setFamilies([u"Lucida Bright"])
         self.fonhis.setFont(font4)
-        self.fonhis.setPixmap(QPixmap(u":/p/TAREA.jpg"))
+        self.fonhis.setPixmap(QPixmap(u":/p/cla.png"))
         self.fonhis.setScaledContents(True)
         self.fdesde = QDateEdit(historial)
         self.fdesde.setObjectName(u"fdesde")
@@ -93,6 +93,12 @@ class Ui_historial(object):
         self.fhasta.setFont(font5)
         self.fhasta.setStyleSheet(u"background-color: rgb(232, 232, 232);")
         self.fhasta.setDateTime(QDateTime(QDate(2024, 1, 1), QTime(0, 0, 0)))
+        self.label = QLabel(historial)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(310, 120, 651, 31))
+        font6 = QFont()
+        font6.setPointSize(13)
+        self.label.setFont(font6)
         self.tablat = QTableWidget(historial)
         if (self.tablat.columnCount() < 9):
             self.tablat.setColumnCount(9)
@@ -115,12 +121,10 @@ class Ui_historial(object):
         __qtablewidgetitem8 = QTableWidgetItem()
         self.tablat.setHorizontalHeaderItem(8, __qtablewidgetitem8)
         self.tablat.setObjectName(u"tablat")
-        self.tablat.setGeometry(QRect(20, 380, 1280, 401))
-        self.tablat.setMinimumSize(QSize(1280, 401))
+        self.tablat.setGeometry(QRect(0, 400, 1330, 505))
+        self.tablat.setMinimumSize(QSize(1330, 505))
         self.tablat.setMaximumSize(QSize(1041, 401))
         self.tablat.setSizeIncrement(QSize(0, 0))
-        font6 = QFont()
-        font6.setPointSize(13)
         self.tablat.setFont(font6)
         self.tablat.setLineWidth(15)
         self.tablat.setAutoScroll(True)
@@ -130,20 +134,12 @@ class Ui_historial(object):
         self.tablat.horizontalHeader().setMinimumSectionSize(87)
         self.tablat.horizontalHeader().setDefaultSectionSize(132)
         self.tablat.verticalHeader().setDefaultSectionSize(66)
-        self.cusu = QComboBox(historial)
-        self.cusu.addItem("")
-        self.cusu.addItem("")
-        self.cusu.addItem("")
+        self.cusu = QLineEdit(historial)
         self.cusu.setObjectName(u"cusu")
-        self.cusu.setGeometry(QRect(290, 230, 261, 31))
+        self.cusu.setGeometry(QRect(300, 230, 231, 31))
         font7 = QFont()
-        font7.setPointSize(10)
+        font7.setPointSize(12)
         self.cusu.setFont(font7)
-        self.cusu.setStyleSheet(u"background-color: rgb(232, 232, 232);")
-        self.label = QLabel(historial)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(310, 120, 651, 31))
-        self.label.setFont(font6)
         self.fonhis.raise_()
         self.log.raise_()
         self.registro.raise_()
@@ -153,9 +149,9 @@ class Ui_historial(object):
         self.tdesde.raise_()
         self.thasta.raise_()
         self.fhasta.raise_()
+        self.label.raise_()
         self.tablat.raise_()
         self.cusu.raise_()
-        self.label.raise_()
 
         self.retranslateUi(historial)
 
@@ -173,28 +169,24 @@ class Ui_historial(object):
         self.tdesde.setText(QCoreApplication.translate("historial", u"Desde", None))
         self.thasta.setText(QCoreApplication.translate("historial", u"Hasta", None))
         self.fhasta.setDisplayFormat(QCoreApplication.translate("historial", u"d/MM/yyyy", None))
+        self.label.setText(QCoreApplication.translate("historial", u"Buscar tareas teniendo en cuenta el usuario y fecha de registro", None))
         ___qtablewidgetitem = self.tablat.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("historial", u"ID", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("historial", u"Usuario", None));
         ___qtablewidgetitem1 = self.tablat.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("historial", u"Usuario", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("historial", u"VLAN", None));
         ___qtablewidgetitem2 = self.tablat.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("historial", u"No. Documento", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("historial", u"Tipo Tarea", None));
         ___qtablewidgetitem3 = self.tablat.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("historial", u"VLAN", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("historial", u"No. Tarea", None));
         ___qtablewidgetitem4 = self.tablat.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("historial", u"Tipo Tarea", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("historial", u"Equipos", None));
         ___qtablewidgetitem5 = self.tablat.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("historial", u"No. Tarea", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("historial", u"Solicitud", None));
         ___qtablewidgetitem6 = self.tablat.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("historial", u"Detalle", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("historial", u"Soluci\u00f3n", None));
         ___qtablewidgetitem7 = self.tablat.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("historial", u"Realizada", None));
         ___qtablewidgetitem8 = self.tablat.horizontalHeaderItem(8)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("historial", u"Fecha", None));
-        self.cusu.setItemText(0, QCoreApplication.translate("historial", u"---Seleccione una opci\u00f3n", None))
-        self.cusu.setItemText(1, QCoreApplication.translate("historial", u"Cristian Moreno", None))
-        self.cusu.setItemText(2, QCoreApplication.translate("historial", u"Jefferson Vasquez", None))
-
-        self.label.setText(QCoreApplication.translate("historial", u"Buscar tareas teniendo en cuenta el usuario y fecha de registro", None))
     # retranslateUi
 

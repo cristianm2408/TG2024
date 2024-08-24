@@ -50,17 +50,34 @@ class Mainwindow():
         icono = QIcon(ImagT)
         self.main.regt.setIcon(icono)
 
+        
+        ImagB = QPixmap("imagenes/baset.png")
+        icono = QIcon(ImagB)
+        self.main.bas.setIcon(icono)
+
+        
+        ImagBU = QPixmap("imagenes/usuu.png")
+        icono = QIcon(ImagBU)
+        self.main.busu.setIcon(icono)
+
+     
+
+
+     
+
      
         self.initGUI()
         self.main.show()
 
     def initGUI(self):
         self.main.regt.clicked.connect(self.abrirregistro)
-        self.main.buscaruf.triggered.connect(self.abrirhistorial)
+        self.main.bas.clicked.connect(self.abrirbase)
+        self.main.busu.clicked.connect(self.abrirhistorial)
         self.main.buscarf.triggered.connect(self.abrirhistorialf)
         self.main.buscarv.triggered.connect(self.abrirhistorialv)
         self.main.acerca.triggered.connect(self.abririnfo)
         self.main.guia.triggered.connect(self.abrirguia)
+        self.baset = uic.loadUi("base.ui")
         self.registro = uic.loadUi("registrotarea.ui")
         self.historial = uic.loadUi("historial.ui")
         self.historialf = uic.loadUi("historialf.ui")
@@ -93,7 +110,59 @@ class Mainwindow():
     
         self.registro.show()
 
+    
+    def abrirbase(self):
+         
         
+        self.baset.tablab.setColumnWidth(0,150) #usuario
+        self.baset.tablab.setColumnWidth(1,150) #VLAN
+        self.baset.tablab.setColumnWidth(2,110) #tipot
+        self.baset.tablab.setColumnWidth(3,90)  #ticket
+        self.baset.tablab.setColumnWidth(4,200) #equipos
+        self.baset.tablab.setColumnWidth(5,120) #solicitud
+        self.baset.tablab.setColumnWidth(6,260) #solucion
+        self.baset.tablab.setColumnWidth(7,70) #realizad
+        self.baset.tablab.setColumnWidth(8,150) #fecha
+
+ 
+         
+        his = Historialdata()
+        data = his.basedatos("01/01/1970", "31/12/2099") 
+
+        self.baset.log.setText("")
+        ImagEM = QPixmap("imagenes/FOsp.png")
+        self.baset.log.setPixmap(ImagEM)
+
+        self.baset.fonhisb.setText("")
+        ImagEM = QPixmap("imagenes/cla.png")
+        self.baset.fonhisb.setPixmap(ImagEM)    
+        
+        fila=0
+        self.baset.tablab.setRowCount(len(data))
+        for item in data:
+            self.baset.tablab.setItem(fila,0,QTableWidgetItem(str(item[0]))) #usuario
+            self.baset.tablab.setItem(fila,1,QTableWidgetItem(str(item[1]))) #VLAN 
+            self.baset.tablab.setItem(fila,2,QTableWidgetItem(str(item[2]))) #tipot
+            self.baset.tablab.setItem(fila,3,QTableWidgetItem(str(item[3]))) #ticket
+            self.baset.tablab.setItem(fila,4,QTableWidgetItem(str(item[4]))) #equipos
+            self.baset.tablab.setItem(fila,5,QTableWidgetItem(str(item[5]))) #detalles
+            self.baset.tablab.setItem(fila,6,QTableWidgetItem(str(item[6]))) #solucion
+            self.baset.tablab.setItem(fila,8,QTableWidgetItem(str(item[9]))) #fecha
+          
+            if item[7] == 'True':
+              self.baset.tablab.setItem(fila,7,QTableWidgetItem("si"))
+            else:
+              self.baset.tablab.setItem(fila,7,QTableWidgetItem("no"))
+               
+              
+              
+
+            fila=fila+1
+    
+    
+        self.baset.show()    
+        self.llenarhistorial()
+
 
     def abrirhistorial(self):
 
@@ -104,17 +173,17 @@ class Mainwindow():
         self.historial.log.setPixmap(ImagLO)
 
         self.historial.fonhis.setText("")
-        ImagFOON = QPixmap("imagenes/TAREA.jpg")
+        ImagFOON = QPixmap("imagenes/cla.png")
         self.historial.fonhis.setPixmap(ImagFOON)
 
        
-        self.historial.tablat.setColumnWidth(0,10)  #id
-        self.historial.tablat.setColumnWidth(1,150) #usuario
-        self.historial.tablat.setColumnWidth(2,110) #documento
-        self.historial.tablat.setColumnWidth(3,90)  #vlan
-        self.historial.tablat.setColumnWidth(4,200) #tipot
-        self.historial.tablat.setColumnWidth(5,120) #numt
-        self.historial.tablat.setColumnWidth(6,260) #detalle
+        self.historial.tablat.setColumnWidth(0,150) #usuario
+        self.historial.tablat.setColumnWidth(1,150) #VLAN
+        self.historial.tablat.setColumnWidth(2,110) #tipot
+        self.historial.tablat.setColumnWidth(3,90)  #ticket
+        self.historial.tablat.setColumnWidth(4,200) #equipos
+        self.historial.tablat.setColumnWidth(5,120) #solicitud
+        self.historial.tablat.setColumnWidth(6,260) #solucion
         self.historial.tablat.setColumnWidth(7,70) #realizad
         self.historial.tablat.setColumnWidth(8,150) #fecha
 
@@ -136,16 +205,15 @@ class Mainwindow():
         self.historialf.fonhis.setPixmap(ImagFOON)
 
       
-        self.historialf.tablatf.setColumnWidth(0,10)  #id
-        self.historialf.tablatf.setColumnWidth(1,150) #usuario
-        self.historialf.tablatf.setColumnWidth(2,110) #documento
-        self.historialf.tablatf.setColumnWidth(3,90)  #vlan
-        self.historialf.tablatf.setColumnWidth(4,200) #tipot
-        self.historialf.tablatf.setColumnWidth(5,120) #numt
-        self.historialf.tablatf.setColumnWidth(6,260) #detalle
+        self.historialf.tablatf.setColumnWidth(0,150) #usuario
+        self.historialf.tablatf.setColumnWidth(1,150) #VLAN
+        self.historialf.tablatf.setColumnWidth(2,110) #tipot
+        self.historialf.tablatf.setColumnWidth(3,90)  #ticket
+        self.historialf.tablatf.setColumnWidth(4,200) #equipos
+        self.historialf.tablatf.setColumnWidth(5,120) #solicitud
+        self.historialf.tablatf.setColumnWidth(6,260) #solucion
         self.historialf.tablatf.setColumnWidth(7,70) #realizad
         self.historialf.tablatf.setColumnWidth(8,150) #fecha
-
 
 
       
@@ -164,13 +232,14 @@ class Mainwindow():
         ImagFOON = QPixmap("imagenes/TAREA.jpg")
         self.historialv.fonhis.setPixmap(ImagFOON)
 
-        self.historialv.tablav.setColumnWidth(0,10)  #id
-        self.historialv.tablav.setColumnWidth(1,150) #usuario
-        self.historialv.tablav.setColumnWidth(2,110) #documento
-        self.historialv.tablav.setColumnWidth(3,90)  #vlan
-        self.historialv.tablav.setColumnWidth(4,200) #tipot
-        self.historialv.tablav.setColumnWidth(5,120) #numt
-        self.historialv.tablav.setColumnWidth(6,260) #detalle
+       
+        self.historialv.tablav.setColumnWidth(0,150) #usuario
+        self.historialv.tablav.setColumnWidth(1,150) #VLAN
+        self.historialv.tablav.setColumnWidth(2,110) #tipot
+        self.historialv.tablav.setColumnWidth(3,90)  #ticket
+        self.historialv.tablav.setColumnWidth(4,200) #equipos
+        self.historialv.tablav.setColumnWidth(5,120) #solicitud
+        self.historialv.tablav.setColumnWidth(6,260) #solucion
         self.historialv.tablav.setColumnWidth(7,70) #realizad
         self.historialv.tablav.setColumnWidth(8,150) #fecha
     
@@ -258,24 +327,27 @@ class Mainwindow():
         self.registro.val.setChecked(False)
     
 
+    
+
+
 
 
     def buscar(self):
         his = Historialdata()
-        data =his.buscarfecha(self.historial.cusu.currentText(),self.historial.fdesde.text(),self.historial.fhasta.text())
+        data =his.buscarfecha(self.historial.cusu.text(),self.historial.fdesde.text(),self.historial.fhasta.text())
         fila=0
         self.historial.tablat.setRowCount(len(data))
         for item in data:
-            self.historial.tablat.setItem(fila,0,QTableWidgetItem(str(item[0])))
-            self.historial.tablat.setItem(fila,1,QTableWidgetItem(str(item[1])))
-            self.historial.tablat.setItem(fila,2,QTableWidgetItem(str(item[4])))
-            self.historial.tablat.setItem(fila,3,QTableWidgetItem(str(item[2])))
-            self.historial.tablat.setItem(fila,4,QTableWidgetItem(str(item[5])))
-            self.historial.tablat.setItem(fila,5,QTableWidgetItem(str(item[6])))
-            self.historial.tablat.setItem(fila,6,QTableWidgetItem(str(item[7])))
-            self.historial.tablat.setItem(fila,8,QTableWidgetItem(str(item[10])))
+            self.historial.tablat.setItem(fila,0,QTableWidgetItem(str(item[0]))) #usuario
+            self.historial.tablat.setItem(fila,1,QTableWidgetItem(str(item[1]))) #VLAN 
+            self.historial.tablat.setItem(fila,2,QTableWidgetItem(str(item[2]))) #tipot
+            self.historial.tablat.setItem(fila,3,QTableWidgetItem(str(item[3]))) #ticket
+            self.historial.tablat.setItem(fila,4,QTableWidgetItem(str(item[4]))) #equipos
+            self.historial.tablat.setItem(fila,5,QTableWidgetItem(str(item[5]))) #detalles
+            self.historial.tablat.setItem(fila,6,QTableWidgetItem(str(item[6]))) #solucion
+            self.historial.tablat.setItem(fila,8,QTableWidgetItem(str(item[9]))) #fecha
           
-            if item[8] == 'True':
+            if item[7] == 'True':
               self.historial.tablat.setItem(fila,7,QTableWidgetItem("si"))
             else:
               self.historial.tablat.setItem(fila,7,QTableWidgetItem("no"))

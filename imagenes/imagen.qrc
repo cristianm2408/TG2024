@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="p">
+    <file>baset.png</file>
+    <file>base.png</file>
+    <file>usuu.png</file>
     <file>cla.png</file>
     <file>FE.png</file>
     <file>gra.png</file>
