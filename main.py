@@ -60,6 +60,24 @@ class Mainwindow():
         icono = QIcon(ImagBU)
         self.main.busu.setIcon(icono)
 
+        
+        ImagBUF = QPixmap("imagenes/cale.png")
+        icono = QIcon(ImagBUF)
+        self.main.busf.setIcon(icono)
+
+           
+        ImagBUV = QPixmap("imagenes/vlan.png")
+        icono = QIcon(ImagBUV)
+        self.main.busv.setIcon(icono)
+
+
+        ImagBUG = QPixmap("imagenes/in.png")
+        icono = QIcon(ImagBUG)
+        self.main.guiau.setIcon(icono)
+
+     
+     
+
      
 
 
@@ -73,10 +91,10 @@ class Mainwindow():
         self.main.regt.clicked.connect(self.abrirregistro)
         self.main.bas.clicked.connect(self.abrirbase)
         self.main.busu.clicked.connect(self.abrirhistorial)
-        self.main.buscarf.triggered.connect(self.abrirhistorialf)
-        self.main.buscarv.triggered.connect(self.abrirhistorialv)
+        self.main.busf.clicked.connect(self.abrirhistorialf)
+        self.main.busv.clicked.connect(self.abrirhistorialv)
         self.main.acerca.triggered.connect(self.abririnfo)
-        self.main.guia.triggered.connect(self.abrirguia)
+        self.main.guiau.clicked.connect(self.abrirguia)
         self.baset = uic.loadUi("base.ui")
         self.registro = uic.loadUi("registrotarea.ui")
         self.historial = uic.loadUi("historial.ui")
@@ -90,8 +108,7 @@ class Mainwindow():
 
 
    
-    def mostrarg(self):
-        self.guiau.show()
+    
 
     
         
@@ -127,7 +144,7 @@ class Mainwindow():
  
          
         his = Historialdata()
-        data = his.basedatos("01/01/1970", "31/12/2099") 
+        data = his.basedatos("01/01/1970", "31/12/3099") 
 
         self.baset.log.setText("")
         ImagEM = QPixmap("imagenes/FOsp.png")
@@ -201,7 +218,7 @@ class Mainwindow():
         self.historialf.log.setPixmap(ImagLO)
 
         self.historialf.fonhis.setText("")
-        ImagFOON = QPixmap("imagenes/TAREA.jpg")
+        ImagFOON = QPixmap("imagenes/cla.png")
         self.historialf.fonhis.setPixmap(ImagFOON)
 
       
@@ -229,7 +246,7 @@ class Mainwindow():
         self.historialv.log.setPixmap(ImagLO)
 
         self.historialv.fonhis.setText("")
-        ImagFOON = QPixmap("imagenes/TAREA.jpg")
+        ImagFOON = QPixmap("imagenes/cla.png")
         self.historialv.fonhis.setPixmap(ImagFOON)
 
        
@@ -256,11 +273,8 @@ class Mainwindow():
         self.info.show()
 
     def abrirguia(self):
-        self.guia.mostrar.clicked.connect(self.mostrarg)
-        self.guia.foto.setText("")
-        ImagLOG = QPixmap("imagenes/manual.png")
-        self.guia.foto.setPixmap(ImagLOG) 
-        self.guia.show()
+      
+        self.guiau.show()
 
 
 
@@ -366,13 +380,13 @@ class Mainwindow():
         for item in dataf:
             self.historialf.tablatf.setItem(fila,0,QTableWidgetItem(str(item[0])))
             self.historialf.tablatf.setItem(fila,1,QTableWidgetItem(str(item[1])))
-            self.historialf.tablatf.setItem(fila,2,QTableWidgetItem(str(item[4])))
-            self.historialf.tablatf.setItem(fila,3,QTableWidgetItem(str(item[2])))
-            self.historialf.tablatf.setItem(fila,4,QTableWidgetItem(str(item[5])))
-            self.historialf.tablatf.setItem(fila,5,QTableWidgetItem(str(item[6])))
-            self.historialf.tablatf.setItem(fila,6,QTableWidgetItem(str(item[7])))
-            self.historialf.tablatf.setItem(fila,8,QTableWidgetItem(str(item[10])))
-            if item[8] == 'True':
+            self.historialf.tablatf.setItem(fila,2,QTableWidgetItem(str(item[2])))
+            self.historialf.tablatf.setItem(fila,3,QTableWidgetItem(str(item[3])))
+            self.historialf.tablatf.setItem(fila,4,QTableWidgetItem(str(item[4])))
+            self.historialf.tablatf.setItem(fila,5,QTableWidgetItem(str(item[5])))
+            self.historialf.tablatf.setItem(fila,6,QTableWidgetItem(str(item[6])))
+            self.historialf.tablatf.setItem(fila,8,QTableWidgetItem(str(item[9])))
+            if item[7] == 'True':
               self.historialf.tablatf.setItem(fila,7,QTableWidgetItem("si"))
             else:
               self.historialf.tablatf.setItem(fila,7,QTableWidgetItem("no"))
@@ -383,19 +397,19 @@ class Mainwindow():
 
     def buscarv(self):
         hisv = Historialdata()
-        datav =hisv.buscarfechav(self.historialv.nvlan.currentText(),self.historialv.hdesdev.text(),self.historialv.hhastav.text())
+        datav =hisv.buscarfechav(self.historialv.nvlan.currentText(),"01/01/1970", "31/12/3099")
         fila=0
         self.historialv.tablav.setRowCount(len(datav))
         for item in datav:
             self.historialv.tablav.setItem(fila,0,QTableWidgetItem(str(item[0])))
             self.historialv.tablav.setItem(fila,1,QTableWidgetItem(str(item[1])))
-            self.historialv.tablav.setItem(fila,2,QTableWidgetItem(str(item[4])))
-            self.historialv.tablav.setItem(fila,3,QTableWidgetItem(str(item[2])))
-            self.historialv.tablav.setItem(fila,4,QTableWidgetItem(str(item[5])))
-            self.historialv.tablav.setItem(fila,5,QTableWidgetItem(str(item[6])))
-            self.historialv.tablav.setItem(fila,6,QTableWidgetItem(str(item[7])))
-            self.historialv.tablav.setItem(fila,8,QTableWidgetItem(str(item[10])))
-            if item[8] == 'True':
+            self.historialv.tablav.setItem(fila,2,QTableWidgetItem(str(item[2])))
+            self.historialv.tablav.setItem(fila,3,QTableWidgetItem(str(item[3])))
+            self.historialv.tablav.setItem(fila,4,QTableWidgetItem(str(item[4])))
+            self.historialv.tablav.setItem(fila,5,QTableWidgetItem(str(item[5])))
+            self.historialv.tablav.setItem(fila,6,QTableWidgetItem(str(item[6])))
+            self.historialv.tablav.setItem(fila,8,QTableWidgetItem(str(item[9])))
+            if item[7] == 'True':
               self.historialv.tablav.setItem(fila,7,QTableWidgetItem("si"))
             else:
               self.historialv.tablav.setItem(fila,7,QTableWidgetItem("no"))

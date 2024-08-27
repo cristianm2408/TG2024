@@ -64,16 +64,16 @@
   <widget class="QPushButton" name="buscarv">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>300</y>
-     <width>131</width>
-     <height>51</height>
+     <x>630</x>
+     <y>210</y>
+     <width>141</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Arial Black</family>
-     <pointsize>12</pointsize>
+     <pointsize>14</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -100,8 +100,8 @@ border-radius:8px</string>
    </property>
    <property name="font">
     <font>
-     <family>MS Shell Dlg 2</family>
-     <pointsize>12</pointsize>
+     <family>Arial Black</family>
+     <pointsize>14</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -128,131 +128,156 @@ border-radius:8px</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="imagenes/imagen.qrc">:/p/TAREA.jpg</pixmap>
+    <pixmap resource="imagenes/imagen.qrc">:/p/cla.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QDateEdit" name="hdesdev">
+  <widget class="QLabel" name="texto">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>230</y>
-     <width>161</width>
+     <x>270</x>
+     <y>120</y>
+     <width>811</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>MS Shell Dlg 2</family>
-     <pointsize>12</pointsize>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Buscar tareas teniendo en cuenta VLAN-Campaña y fecha de registro</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="nvlan">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>230</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(232, 232, 232);</string>
    </property>
-   <property name="dateTime">
-    <datetime>
-     <hour>0</hour>
-     <minute>0</minute>
-     <second>0</second>
-     <year>2024</year>
-     <month>1</month>
-     <day>1</day>
-    </datetime>
-   </property>
-   <property name="displayFormat">
-    <string>d/MM/yyyy</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="vdesde">
-   <property name="geometry">
-    <rect>
-     <x>660</x>
-     <y>180</y>
-     <width>221</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>MS Shell Dlg 2</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Desde</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="vhasta">
-   <property name="geometry">
-    <rect>
-     <x>870</x>
-     <y>180</y>
-     <width>221</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>MS Shell Dlg 2</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Hasta</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="hhastav">
-   <property name="geometry">
-    <rect>
-     <x>860</x>
-     <y>230</y>
-     <width>161</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>MS Shell Dlg 2</family>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 232, 232);</string>
-   </property>
-   <property name="dateTime">
-    <datetime>
-     <hour>0</hour>
-     <minute>0</minute>
-     <second>0</second>
-     <year>2024</year>
-     <month>1</month>
-     <day>1</day>
-    </datetime>
-   </property>
-   <property name="displayFormat">
-    <string>d/MM/yyyy</string>
-   </property>
+   <item>
+    <property name="text">
+     <string>---Seleccione una opción</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ADMINISTRACIÓN </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ADDI </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ALKOSTO </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BBVA </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TUYABOG  </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COMPENSAR</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>KERALTY </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>JUAN VALDEZ </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PREVISORA </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PARMALAT </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TUBOLETA </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PAPA JOHNS </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>NOVONORDISK </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SALUD TOTAL </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COLPENSIONES </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COLMEDICA</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>CONINSA </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>OTRA</string>
+    </property>
+   </item>
   </widget>
   <widget class="QTableWidget" name="tablav">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>380</y>
-     <width>1280</width>
-     <height>401</height>
+     <x>0</x>
+     <y>320</y>
+     <width>1330</width>
+     <height>505</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
-     <width>1280</width>
-     <height>401</height>
+     <width>1330</width>
+     <height>505</height>
     </size>
    </property>
    <property name="maximumSize">
@@ -301,17 +326,7 @@ border-radius:8px</string>
    </attribute>
    <column>
     <property name="text">
-     <string>ID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>Usuario</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>No. Documento</string>
     </property>
    </column>
    <column>
@@ -331,7 +346,17 @@ border-radius:8px</string>
    </column>
    <column>
     <property name="text">
-     <string>Detalle</string>
+     <string>Equipos</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Solicitud</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Solución</string>
     </property>
    </column>
    <column>
@@ -345,144 +370,14 @@ border-radius:8px</string>
     </property>
    </column>
   </widget>
-  <widget class="QLabel" name="texto">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>120</y>
-     <width>811</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>13</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Buscar tareas teniendo en cuenta VLAN-Campaña y fecha de registro</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="nvlan">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>230</y>
-     <width>241</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 232, 232);</string>
-   </property>
-   <item>
-    <property name="text">
-     <string>---Seleccione una opción</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>ADMINISTRACIÓN 104</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>ADDI 948</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>ALKOSTO 939</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>BBVA 947</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>TUYABOG  916</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>KERALTY 906</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>JUAN VALDEZ 983</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>RECAUDOBOG 938</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>PREVISORA 944</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>PARMALAT 995</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>TUBOLETA 962</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>PAPA JOHNS 963</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>NOVONORDISK 966</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>SALUD TOTAL 904</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>COLPENSIONES 978</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>CONINSA 980</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>OTRA</string>
-    </property>
-   </item>
-  </widget>
   <zorder>fonhis</zorder>
   <zorder>log</zorder>
   <zorder>registro</zorder>
   <zorder>buscarv</zorder>
   <zorder>vlan</zorder>
-  <zorder>hdesdev</zorder>
-  <zorder>vdesde</zorder>
-  <zorder>vhasta</zorder>
-  <zorder>hhastav</zorder>
-  <zorder>tablav</zorder>
   <zorder>texto</zorder>
   <zorder>nvlan</zorder>
+  <zorder>tablav</zorder>
  </widget>
  <resources>
   <include location="imagenes/imagen.qrc"/>

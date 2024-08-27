@@ -10,6 +10,7 @@ class Historialdata():
       sqlbuscar = """
       SELECT * FROM tareas  
       WHERE fecha>='{}' AND fecha<='{}'
+      ORDER BY fecha DESC
       """.format(bdesde, bhasta)
       res = self.cursor.execute(sqlbuscar)
       data = res.fetchall()
@@ -21,6 +22,7 @@ class Historialdata():
       sqlbuscar = """
       SELECT * FROM tareas  
       WHERE usuario='{}' AND fecha>='{}' AND fecha<='{}'
+      ORDER BY fecha DESC
       """.format(usu,desde, hasta)
       res = self.cursor.execute(sqlbuscar)
       data = res.fetchall()
@@ -32,6 +34,7 @@ class Historialdata():
       sqlbuscarf = """
       SELECT * FROM tareas  
       WHERE fecha>='{}' AND fecha<='{}'
+      ORDER BY fecha DESC
       """.format(fdesde, fhasta)
       res = self.cursor.execute(sqlbuscarf)
       dataf = res.fetchall()
@@ -44,21 +47,11 @@ class Historialdata():
       sqlbuscarv = """
       SELECT * FROM tareas  
       WHERE vlan='{}' AND fecha>='{}' AND fecha<='{}'
-      """.format(vlan,vdesde, vhasta)
+      ORDER BY fecha DESC
+      """.format(vlan, vdesde, vhasta)
       res = self.cursor.execute(sqlbuscarv)
       datav = res.fetchall()
       return datav
    
    
-   def tablam(self, tdesde, thasta):
-      self.db = con.Conexion().conectar()
-      self.cursor = self.db.cursor()
-      sqlbuscart = """
-      SELECT * FROM tareas  
-      WHERE fecha>='{}' AND fecha<='{}'
-      """.format(tdesde, thasta)
-      res = self.cursor.execute(sqlbuscart)
-      datat = res.fetchall()
-      return datat
-   
-    
+  

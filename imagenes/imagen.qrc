@@ -1,5 +1,12 @@
 <RCC>
   <qresource prefix="p">
+    <file>ma.png</file>
+    <file>in.png</file>
+    <file>gui.png</file>
+    <file>info.png</file>
+    <file>vlan.png</file>
+    <file>cale.png</file>
+    <file>fecha.png</file>
     <file>baset.png</file>
     <file>base.png</file>
     <file>usuu.png</file>
