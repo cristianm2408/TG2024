@@ -16,7 +16,11 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Registro Tareas</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="imagenes/imagen.qrc">
+    <normaloff>:/p/em.png</normaloff>:/p/em.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>

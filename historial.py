@@ -1,8 +1,12 @@
 import conexion as con
 from datetime import datetime
 from tareas import Tarea
-
+from PyQt6.QtWidgets import QMessageBox
 class Historialdata():
+   def __init__(self, historiale):
+        self.historiale = historiale  
+        self.db = con.Conexion().conectar() 
+        self.cursor = self.db.cursor()
 
    def basedatos(self, bdesde, bhasta):
       self.db = con.Conexion().conectar()
@@ -53,5 +57,23 @@ class Historialdata():
       datav = res.fetchall()
       return datav
    
-   
-  
+   def eliminar_tarea_por_ticket(self):
+        # Obtener el número de ticket desde el QLineEdit en historiale
+        numero_ticket = self.historiale.nticket.text()  # Aquí accedemos correctamente al QLineEdit desde la ventana historiale
+
+        if numero_ticket:
+            try:
+                # Consulta SQL para eliminar la tarea
+                query = "DELETE FROM tareas WHERE numt = ?"
+                self.cursor.execute(query, (numero_ticket,))
+                self.db.commit()
+
+                # Comprobar si se eliminó alguna tarea
+                if self.cursor.rowcount > 0:
+                    QMessageBox.information(self.historiale, "Éxito", f"Tarea con ticket {numero_ticket} eliminada.")
+                else:
+                    QMessageBox.warning(self.historiale, "Error", "No se encontró ninguna tarea con ese número de ticket.")
+            except Exception as e:
+                QMessageBox.critical(self.historiale, "Error", f"No se pudo eliminar la tarea: {e}")
+        else:
+            QMessageBox.warning(self.historiale, "Error", "Por favor, ingresa un número de ticket.")

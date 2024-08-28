@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="p">
+    <file>del.png</file>
+    <file>gren.png</file>
+    <file>cod.png</file>
+    <file>ges.png</file>
+    <file>EMTEG.ico</file>
+    <file>em.png</file>
     <file>ma.png</file>
     <file>in.png</file>
     <file>gui.png</file>

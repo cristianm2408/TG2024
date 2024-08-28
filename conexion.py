@@ -2,11 +2,11 @@ import sqlite3
 
 class Conexion():
     def __init__(self):
-      try:
-            self.con =sqlite3.connect("redes.db")
-            self.creartablas()
-      except Exception as ex:
-          print(ex)
+       try:
+        self.con = sqlite3.connect("redes.db", timeout=10, isolation_level="IMMEDIATE")
+        self.creartablas()
+       except Exception as ex:
+        print(ex)
 
     def creartablas(self):
         sql_create_table1 = """ CREATE TABLE IF NOT EXISTS usuarios
@@ -25,8 +25,10 @@ class Conexion():
         cur = self.con.cursor()
         cur.execute(sql_insert)
         self.con.commit()
+        cur.close() 
       except Exception as ex: 
          print("Ya se creó el usuario admin",ex)
+       
 
 
     def conectar(self):

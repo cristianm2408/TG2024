@@ -10,13 +10,29 @@
     <height>805</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1316</width>
+    <height>805</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1316</width>
+    <height>805</height>
+   </size>
+  </property>
   <property name="font">
    <font>
     <pointsize>1</pointsize>
    </font>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Tareas</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="imagenes/imagen.qrc">
+    <normaloff>:/p/em.png</normaloff>:/p/em.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>

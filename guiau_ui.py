@@ -24,6 +24,11 @@ class Ui_guia(object):
         if not guia.objectName():
             guia.setObjectName(u"guia")
         guia.resize(1099, 857)
+        guia.setMinimumSize(QSize(1099, 857))
+        guia.setMaximumSize(QSize(1099, 857))
+        icon = QIcon()
+        icon.addFile(u":/p/em.png", QSize(), QIcon.Normal, QIcon.Off)
+        guia.setWindowIcon(icon)
         guia.setStyleSheet(u"background-color: rgb(197, 197, 197);")
         self.label = QLabel(guia)
         self.label.setObjectName(u"label")
@@ -53,7 +58,7 @@ class Ui_guia(object):
     # setupUi
 
     def retranslateUi(self, guia):
-        guia.setWindowTitle(QCoreApplication.translate("guia", u"Dialog", None))
+        guia.setWindowTitle(QCoreApplication.translate("guia", u"Guia de Usuario", None))
         self.label.setText(QCoreApplication.translate("guia", u"MANUAL DE USUARIO", None))
         self.textEdit.setHtml(QCoreApplication.translate("guia", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"

@@ -28,6 +28,9 @@ class Ui_Registro(object):
         font = QFont()
         font.setPointSize(1)
         Registro.setFont(font)
+        icon = QIcon()
+        icon.addFile(u":/p/em.png", QSize(), QIcon.Normal, QIcon.Off)
+        Registro.setWindowIcon(icon)
         Registro.setStyleSheet(u"")
         self.logo = QLabel(Registro)
         self.logo.setObjectName(u"logo")
@@ -229,7 +232,7 @@ class Ui_Registro(object):
     # setupUi
 
     def retranslateUi(self, Registro):
-        Registro.setWindowTitle(QCoreApplication.translate("Registro", u"Dialog", None))
+        Registro.setWindowTitle(QCoreApplication.translate("Registro", u"Registro Tareas", None))
         self.logo.setText("")
         self.registro.setText(QCoreApplication.translate("Registro", u"REGISTRO DE TAREAS", None))
         self.tusu.setText(QCoreApplication.translate("Registro", u"Usuario", None))

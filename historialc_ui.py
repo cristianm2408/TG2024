@@ -26,9 +26,14 @@ class Ui_historial(object):
         if not historial.objectName():
             historial.setObjectName(u"historial")
         historial.resize(1319, 805)
+        historial.setMinimumSize(QSize(1319, 805))
+        historial.setMaximumSize(QSize(1319, 805))
         font = QFont()
         font.setPointSize(1)
         historial.setFont(font)
+        icon = QIcon()
+        icon.addFile(u":/p/em.png", QSize(), QIcon.Normal, QIcon.Off)
+        historial.setWindowIcon(icon)
         historial.setStyleSheet(u"")
         self.log = QLabel(historial)
         self.log.setObjectName(u"log")
@@ -61,6 +66,8 @@ class Ui_historial(object):
         self.fonhis = QLabel(historial)
         self.fonhis.setObjectName(u"fonhis")
         self.fonhis.setGeometry(QRect(0, -20, 1331, 931))
+        self.fonhis.setMinimumSize(QSize(1331, 931))
+        self.fonhis.setMaximumSize(QSize(1331, 931))
         font3 = QFont()
         font3.setFamilies([u"Lucida Bright"])
         self.fonhis.setFont(font3)
@@ -150,7 +157,7 @@ class Ui_historial(object):
     # setupUi
 
     def retranslateUi(self, historial):
-        historial.setWindowTitle(QCoreApplication.translate("historial", u"Dialog", None))
+        historial.setWindowTitle(QCoreApplication.translate("historial", u"Tareas", None))
         self.log.setText("")
         self.registro.setText(QCoreApplication.translate("historial", u"HISTORIAL DE TAREAS", None))
         self.buscarv.setText(QCoreApplication.translate("historial", u"Buscar", None))

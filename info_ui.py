@@ -16,7 +16,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QDialog, QLabel, QSizePolicy,
-    QTextEdit, QWidget)
+    QWidget)
 import imagen_rc
 import TG_rc
 
@@ -24,11 +24,16 @@ class Ui_info(object):
     def setupUi(self, info):
         if not info.objectName():
             info.setObjectName(u"info")
-        info.resize(588, 279)
+        info.resize(639, 287)
+        info.setMinimumSize(QSize(639, 287))
+        info.setMaximumSize(QSize(639, 287))
+        icon = QIcon()
+        icon.addFile(u":/p/em.png", QSize(), QIcon.Normal, QIcon.Off)
+        info.setWindowIcon(icon)
         info.setStyleSheet(u"background-color: rgb(197, 197, 197);")
         self.autor = QLabel(info)
         self.autor.setObjectName(u"autor")
-        self.autor.setGeometry(QRect(10, 50, 171, 161))
+        self.autor.setGeometry(QRect(20, 50, 171, 161))
         self.autor.setPixmap(QPixmap(u":/p/8083308.png"))
         self.autor.setScaledContents(True)
         self.label = QLabel(info)
@@ -39,10 +44,14 @@ class Ui_info(object):
         font.setPointSize(15)
         font.setBold(True)
         self.label.setFont(font)
-        self.textEdit = QTextEdit(info)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setGeometry(QRect(210, 60, 371, 221))
-        self.textEdit.setStyleSheet(u"")
+        self.label_2 = QLabel(info)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(200, 60, 701, 251))
+        self.label_2.setMinimumSize(QSize(700, 251))
+        self.label_2.setMaximumSize(QSize(701, 251))
+        font1 = QFont()
+        font1.setPointSize(12)
+        self.label_2.setFont(font1)
 
         self.retranslateUi(info)
 
@@ -50,21 +59,9 @@ class Ui_info(object):
     # setupUi
 
     def retranslateUi(self, info):
-        info.setWindowTitle(QCoreApplication.translate("info", u"Dialog", None))
+        info.setWindowTitle(QCoreApplication.translate("info", u"Informaci\u00f3n ", None))
         self.autor.setText("")
         self.label.setText(QCoreApplication.translate("info", u"<html><head/><body><p>GESTOR DE TAREAS</p></body></html>", None))
-        self.textEdit.setHtml(QCoreApplication.translate("info", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Version 1.1.4</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Este programa fue dise\u00f1ado para la gesti\u00f3n de tareas asignadas para el \u00e1rea de redes en la empresa Emtelco.</span></p>\n"
-"<p style=\"-qt-paragraph-type:"
-                        "empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Desarrollado por:</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600; text-decoration: underline;\">Cristian Moreno</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600; text-decoration: underline;\"><br /></p></body></html>", None))
+        self.label_2.setText(QCoreApplication.translate("info", u"<html><head/><body><p><span style=\" font-weight:600;\">Version 1.1.4</span></p><p><span style=\" font-weight:600;\"><br/>Este programa fue dise\u00f1ado para la gesti\u00f3n de tareas </span></p><p align=\"justify\"><span style=\" font-weight:600;\">asignadas para el \u00e1rea de redes en la empresa Emtelco.</span></p><p><span style=\" font-weight:600;\"><br/>Desarrollado por:</span></p><p><span style=\" font-weight:600; text-decoration: underline; color:#00007f;\">Cristian Moreno</span></p><p><span style=\" font-weight:600;\"><br/></span></p></body></html>", None))
     # retranslateUi
 

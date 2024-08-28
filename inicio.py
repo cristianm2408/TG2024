@@ -5,10 +5,18 @@ from PyQt6.QtGui import QPixmap
 from usu import Usuariodata
 from main import Mainwindow
 from usuario import Usuario
+from PyQt6.QtWidgets import QApplication, QMainWindow
+from PyQt6.QtGui import QIcon
+from PyQt6 import uic
 
 class Login():
     def __init__(self):
         self.login = uic.loadUi("inicio.ui")
+
+        self.login.setWindowIcon(QIcon('imagenes/EMTEG.ico'))
+
+       
+
         self.login.USUARIO.setText("")
         ImagU = QPixmap("imagenes/Up.png")
         self.login.USUARIO.setPixmap(ImagU)

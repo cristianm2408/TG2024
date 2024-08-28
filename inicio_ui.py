@@ -18,13 +18,17 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QDialog, QLabel, QLineEdit,
     QPushButton, QSizePolicy, QWidget)
 import imagen_rc
-import imagen_rc
 
 class Ui_Formlogin(object):
     def setupUi(self, Formlogin):
         if not Formlogin.objectName():
             Formlogin.setObjectName(u"Formlogin")
         Formlogin.resize(446, 526)
+        Formlogin.setMinimumSize(QSize(446, 526))
+        Formlogin.setMaximumSize(QSize(446, 526))
+        icon = QIcon()
+        icon.addFile(u":/p/EMTEG.ico", QSize(), QIcon.Normal, QIcon.Off)
+        Formlogin.setWindowIcon(icon)
         Formlogin.setAutoFillBackground(False)
         Formlogin.setStyleSheet(u"")
         self.SESION = QLabel(Formlogin)

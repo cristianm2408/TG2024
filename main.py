@@ -37,9 +37,17 @@ class Mainwindow():
     def __init__(self):
 
         self.main = uic.loadUi("main.ui")
+
+        self.main.setWindowIcon(QIcon('imagenes/em.png'))
+
+        
+        self.main.gest.setText("")
+        ImagG = QPixmap("imagenes/ges.png")
+        self.main.gest.setPixmap(ImagG)
+         
         
         self.main.fondo.setText("")
-        ImagFo = QPixmap("imagenes/bluep.jpg")
+        ImagFo = QPixmap("imagenes/fonda.png")
         self.main.fondo.setPixmap(ImagFo)
          
         self.main.emtelco.setText("")  
@@ -75,6 +83,13 @@ class Mainwindow():
         icono = QIcon(ImagBUG)
         self.main.guiau.setIcon(icono)
 
+        
+        ImagE = QPixmap("imagenes/del.png")
+        icono = QIcon(ImagE)
+        self.main.eli.setIcon(icono)
+
+     
+
      
      
 
@@ -88,6 +103,8 @@ class Mainwindow():
         self.main.show()
 
     def initGUI(self):
+      
+
         self.main.regt.clicked.connect(self.abrirregistro)
         self.main.bas.clicked.connect(self.abrirbase)
         self.main.busu.clicked.connect(self.abrirhistorial)
@@ -95,14 +112,19 @@ class Mainwindow():
         self.main.busv.clicked.connect(self.abrirhistorialv)
         self.main.acerca.triggered.connect(self.abririnfo)
         self.main.guiau.clicked.connect(self.abrirguia)
+        self.main.eli.clicked.connect(self.abrireli)
         self.baset = uic.loadUi("base.ui")
         self.registro = uic.loadUi("registrotarea.ui")
         self.historial = uic.loadUi("historial.ui")
         self.historialf = uic.loadUi("historialf.ui")
         self.historialv = uic.loadUi("historialc.ui")
+        self.historiale = uic.loadUi("eliminar.ui")
         self.guia = uic.loadUi("guia.ui")
         self.guiau = uic.loadUi("guiau.ui")
         self.info = uic.loadUi("info.ui")
+        self.historialdata = Historialdata(self.historiale) 
+        self.historiale.eliminar.clicked.connect(self.historialdata.eliminar_tarea_por_ticket)
+
 
       
 
@@ -115,6 +137,7 @@ class Mainwindow():
 
     def abrirregistro(self):
         self.registro.reg.clicked.connect(self.registrarTarea)
+        self.registro.setWindowIcon(QIcon('imagenes/em.png'))
         self.registro.logo.setText("")
         ImagEM = QPixmap("imagenes/FOsp.png")
         self.registro.logo.setPixmap(ImagEM)
@@ -141,9 +164,9 @@ class Mainwindow():
         self.baset.tablab.setColumnWidth(7,70) #realizad
         self.baset.tablab.setColumnWidth(8,150) #fecha
 
- 
+        self.baset.setWindowIcon(QIcon('imagenes/em.png'))
          
-        his = Historialdata()
+        his = Historialdata(self.historiale)
         data = his.basedatos("01/01/1970", "31/12/3099") 
 
         self.baset.log.setText("")
@@ -184,6 +207,7 @@ class Mainwindow():
     def abrirhistorial(self):
 
         self.historial.bus.clicked.connect(self.buscar)
+        self.historial.setWindowIcon(QIcon('imagenes/em.png'))
 
         self.historial.log.setText("")
         ImagLO = QPixmap("imagenes/FOsp.png")
@@ -212,6 +236,7 @@ class Mainwindow():
     def abrirhistorialf(self):
 
         self.historialf.hbus.clicked.connect(self.buscarf)
+        self.historialf.setWindowIcon(QIcon('imagenes/em.png'))
 
         self.historialf.log.setText("")
         ImagLO = QPixmap("imagenes/FOsp.png")
@@ -240,6 +265,7 @@ class Mainwindow():
     def abrirhistorialv(self):
 
         self.historialv.buscarv.clicked.connect(self.buscarv)
+        self.historialv.setWindowIcon(QIcon('imagenes/em.png'))
 
         self.historialv.log.setText("")
         ImagLO = QPixmap("imagenes/FOsp.png")
@@ -264,15 +290,38 @@ class Mainwindow():
         self.historialv.show()
         self.llenarhistorial()
 
+    def abrireli(self):
+    # Mostrar la ventana de eliminación
+        
+        self.historiale.setWindowIcon(QIcon('imagenes/em.png'))
+         
+        
+        
+
+        self.historiale.log.setText("")
+        ImagEM = QPixmap("imagenes/FOsp.png")
+        self.historiale.log.setPixmap(ImagEM)
+
+        self.historiale.fonhisb.setText("")
+        ImagEM = QPixmap("imagenes/cla.png")
+        self.historiale.fonhisb.setPixmap(ImagEM)    
+        self.historiale.show()
+     
+
     def abririnfo(self):
 
         self.info.autor.setText("")
         ImagLO = QPixmap("imagenes/8083308.png")
         self.info.autor.setPixmap(ImagLO)
+        self.info.setWindowIcon(QIcon('imagenes/em.png'))
 
         self.info.show()
 
     def abrirguia(self):
+        
+        self.guiau.setWindowIcon(QIcon('imagenes/em.png'))
+
+
       
         self.guiau.show()
 
@@ -347,7 +396,7 @@ class Mainwindow():
 
 
     def buscar(self):
-        his = Historialdata()
+        his = Historialdata(self.historiale)
         data =his.buscarfecha(self.historial.cusu.text(),self.historial.fdesde.text(),self.historial.fhasta.text())
         fila=0
         self.historial.tablat.setRowCount(len(data))
@@ -373,7 +422,7 @@ class Mainwindow():
 
 
     def buscarf(self):
-        hisf = Historialdata()
+        hisf = Historialdata(self.historiale)
         dataf =hisf.buscarfechaf(self.historialf.hdesdef.text(),self.historialf.hhastaf.text())
         fila=0
         self.historialf.tablatf.setRowCount(len(dataf))
@@ -396,7 +445,7 @@ class Mainwindow():
             fila=fila+1
 
     def buscarv(self):
-        hisv = Historialdata()
+        hisv = Historialdata(self.historiale)
         datav =hisv.buscarfechav(self.historialv.nvlan.currentText(),"01/01/1970", "31/12/3099")
         fila=0
         self.historialv.tablav.setRowCount(len(datav))
@@ -417,8 +466,10 @@ class Mainwindow():
               
 
             fila=fila+1
-
         
+     
+    
+
     def  llenarhistorial(self):
         pass
    
