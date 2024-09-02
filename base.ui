@@ -59,10 +59,10 @@
   <widget class="QLabel" name="registro">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>440</x>
      <y>30</y>
      <width>461</width>
-     <height>51</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -74,7 +74,13 @@
     </font>
    </property>
    <property name="text">
-    <string>HISTORIAL DE TAREAS</string>
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/histo.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="fonhisb">
@@ -95,7 +101,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="imagenes/imagen.qrc">:/p/cla.png</pixmap>
+    <pixmap resource="imagenes/imagen.qrc">:/p/gra.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -212,7 +218,6 @@
   <zorder>tablab</zorder>
  </widget>
  <resources>
-  <include location="imagenes/imagen.qrc"/>
   <include location="imagenes/imagen.qrc"/>
  </resources>
  <connections/>

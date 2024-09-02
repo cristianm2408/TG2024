@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>883</width>
-    <height>294</height>
+    <width>735</width>
+    <height>210</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>735</width>
+    <height>210</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>10000</width>
-    <height>10000</height>
+    <width>735</width>
+    <height>210</height>
    </size>
   </property>
   <property name="font">
@@ -70,14 +70,14 @@
    </property>
    <property name="minimumSize">
     <size>
-     <width>0</width>
-     <height>0</height>
+     <width>1431</width>
+     <height>941</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>10000</width>
-     <height>10000</height>
+     <width>1431</width>
+     <height>941</height>
     </size>
    </property>
    <property name="font">
@@ -89,7 +89,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="imagenes/imagen.qrc">:/p/cla.png</pixmap>
+    <pixmap resource="imagenes/imagen.qrc">:/p/fonda.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -98,10 +98,10 @@
   <widget class="QPushButton" name="eliminar">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>100</y>
-     <width>141</width>
-     <height>61</height>
+     <x>320</x>
+     <y>140</y>
+     <width>131</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -116,8 +116,17 @@
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(123, 221, 221);
-border-radius:8px</string>
+    <string notr="true">
+QPushButton {
+    background-color: #7BDDDD;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+    background-color: #0EC2C2;
+}</string>
    </property>
    <property name="text">
     <string>Eliminar</string>
@@ -126,10 +135,10 @@ border-radius:8px</string>
   <widget class="QLineEdit" name="nticket">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>120</y>
+     <x>280</x>
+     <y>80</y>
      <width>211</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -141,20 +150,20 @@ border-radius:8px</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>90</y>
-     <width>201</width>
-     <height>20</height>
+     <x>130</x>
+     <y>30</y>
+     <width>611</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Arial Black</family>
-     <pointsize>12</pointsize>
+     <pointsize>14</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>No. TICKET</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#03197b;&quot;&gt;Ingrese número de ticket de la tarea que desea eliminar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <zorder>fonhisb</zorder>
@@ -164,7 +173,6 @@ border-radius:8px</string>
   <zorder>label</zorder>
  </widget>
  <resources>
-  <include location="imagenes/imagen.qrc"/>
   <include location="imagenes/imagen.qrc"/>
  </resources>
  <connections/>

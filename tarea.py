@@ -4,6 +4,7 @@ from tareas import Tarea
 from datetime import datetime
 
 class Tareadata():
+   
   
    def __init__(self) -> None:
           try: 
@@ -35,6 +36,7 @@ class Tareadata():
            
       
    def regis(self,info:Tarea):
+      
       fecha = datetime.now().strftime("%d/%m/%Y, %H:%M")
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()

@@ -32,13 +32,13 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(197, 197, 197);</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="manual">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>20</y>
-     <width>381</width>
-     <height>41</height>
+     <x>350</x>
+     <y>30</y>
+     <width>391</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -50,13 +50,19 @@
     </font>
    </property>
    <property name="text">
-    <string>MANUAL DE USUARIO</string>
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/man.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>50</x>
      <y>140</y>
      <width>1001</width>
      <height>701</height>
@@ -78,24 +84,28 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="fonhis">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>60</y>
-     <width>1291</width>
-     <height>81</height>
+     <x>-10</x>
+     <y>-10</y>
+     <width>1311</width>
+     <height>951</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
    <property name="text">
-    <string>Acontinuación se presenta la guía de usuario para el registro de tareas diarias y  respectiva busqueda de tareas registradas en el historial</string>
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/gra.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
+  <zorder>fonhis</zorder>
+  <zorder>manual</zorder>
+  <zorder>textEdit</zorder>
  </widget>
  <resources>
   <include location="imagenes/imagen.qrc"/>

@@ -20,16 +20,31 @@ class Conexion():
         self.crearadmin()
 
     def crearadmin(self):
-      try:
-        sql_insert = """ INSERT INTO usuarios values(null,'{}','{}','{}')""".format("Administrador","admin","admin2024")
-        cur = self.con.cursor()
-        cur.execute(sql_insert)
-        self.con.commit()
-        cur.close() 
-      except Exception as ex: 
-         print("Ya se creó el usuario admin",ex)
-       
+        try:
+        # Consulta usando parametrización para evitar inyecciones SQL
+            sql_insert = """INSERT OR IGNORE INTO usuarios (nombre, usuario, clave) 
+                        VALUES (?, ?, ?)"""
+        
+        # Establecer los valores del usuario
+            admin_values = ("Administrador", "admin", "admin2024")
+        
+        # Crear cursor y ejecutar la consulta
+            cur = self.con.cursor()
+            cur.execute(sql_insert, admin_values)
+            self.con.commit()  # Confirmar la transacción
 
+        # Verificar si se insertó el usuario o si ya existía
+            if cur.rowcount == 0:
+               
+             print("Ya se creó el usuario admin")
+            else:
+             print("Usuario admin creado con éxito")
+        
+            cur.close()  # Cerrar el cursor después de usarlo
+        except sqlite3.IntegrityError as e:
+          print("Error de integridad en la base de datos:", e)
+        except Exception as ex: 
+           print("Se produjo un error al crear el usuario admin:", ex)
 
     def conectar(self):
             return self.con

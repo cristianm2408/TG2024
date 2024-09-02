@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1316</width>
+    <width>1329</width>
     <height>805</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1316</width>
+    <width>1329</width>
     <height>805</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1316</width>
+    <width>1329</width>
     <height>805</height>
    </size>
   </property>
@@ -56,32 +56,11 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="registro">
-   <property name="geometry">
-    <rect>
-     <x>520</x>
-     <y>20</y>
-     <width>461</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Black</family>
-     <pointsize>19</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>HISTORIAL DE TAREAS</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="bus">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>270</y>
+     <x>1150</x>
+     <y>190</y>
      <width>151</width>
      <height>61</height>
     </rect>
@@ -98,8 +77,17 @@
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(123, 221, 221);
-border-radius:8px</string>
+    <string notr="true">
+QPushButton {
+    background-color: #7BDDDD;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+    background-color: #0EC2C2;
+}</string>
    </property>
    <property name="text">
     <string>Buscar</string>
@@ -108,9 +96,9 @@ border-radius:8px</string>
   <widget class="QLabel" name="nusu">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>160</y>
-     <width>241</width>
+     <x>70</x>
+     <y>200</y>
+     <width>261</width>
      <height>41</height>
     </rect>
    </property>
@@ -123,15 +111,15 @@ border-radius:8px</string>
     </font>
    </property>
    <property name="text">
-    <string>Nombre de usuario</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt; Nombre de usuario&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="fonhis">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>-30</y>
-     <width>1331</width>
+     <x>-10</x>
+     <y>-10</y>
+     <width>1411</width>
      <height>931</height>
     </rect>
    </property>
@@ -144,7 +132,7 @@ border-radius:8px</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="imagenes/imagen.qrc">:/p/cla.png</pixmap>
+    <pixmap resource="imagenes/imagen.qrc">:/p/gra.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -153,7 +141,7 @@ border-radius:8px</string>
   <widget class="QDateEdit" name="fdesde">
    <property name="geometry">
     <rect>
-     <x>630</x>
+     <x>660</x>
      <y>200</y>
      <width>161</width>
      <height>41</height>
@@ -180,14 +168,17 @@ border-radius:8px</string>
    </property>
    <property name="displayFormat">
     <string>d/MM/yyyy</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="tdesde">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>160</y>
-     <width>221</width>
+     <x>580</x>
+     <y>200</y>
+     <width>121</width>
      <height>31</height>
     </rect>
    </property>
@@ -200,14 +191,14 @@ border-radius:8px</string>
     </font>
    </property>
    <property name="text">
-    <string>Desde</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Desde&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="thasta">
    <property name="geometry">
     <rect>
-     <x>860</x>
-     <y>160</y>
+     <x>870</x>
+     <y>200</y>
      <width>221</width>
      <height>31</height>
     </rect>
@@ -221,48 +212,16 @@ border-radius:8px</string>
     </font>
    </property>
    <property name="text">
-    <string>Hasta</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="fhasta">
-   <property name="geometry">
-    <rect>
-     <x>860</x>
-     <y>200</y>
-     <width>161</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>MS Shell Dlg 2</family>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 232, 232);</string>
-   </property>
-   <property name="dateTime">
-    <datetime>
-     <hour>0</hour>
-     <minute>0</minute>
-     <second>0</second>
-     <year>2024</year>
-     <month>1</month>
-     <day>1</day>
-    </datetime>
-   </property>
-   <property name="displayFormat">
-    <string>d/MM/yyyy</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Hasta&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>200</x>
      <y>110</y>
      <width>991</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -272,28 +231,28 @@ border-radius:8px</string>
     </font>
    </property>
    <property name="text">
-    <string>• Buscar tareas teniendo en cuenta el usuario y fecha de registro</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;- Buscar tareas teniendo en cuenta el usuario y fecha de registro&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="tablat">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>350</y>
+     <y>300</y>
      <width>1330</width>
-     <height>505</height>
+     <height>651</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
      <width>1330</width>
-     <height>505</height>
+     <height>651</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>1041</width>
-     <height>401</height>
+     <width>1330</width>
+     <height>651</height>
     </size>
    </property>
    <property name="sizeIncrement">
@@ -383,9 +342,9 @@ border-radius:8px</string>
   <widget class="QLineEdit" name="cusu">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>290</x>
      <y>200</y>
-     <width>221</width>
+     <width>241</width>
      <height>41</height>
     </rect>
    </property>
@@ -395,18 +354,80 @@ border-radius:8px</string>
     </font>
    </property>
   </widget>
+  <widget class="QLabel" name="registro2">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>20</y>
+     <width>461</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Black</family>
+     <pointsize>19</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/histo.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="fhasta">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>200</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2024</year>
+     <month>1</month>
+     <day>1</day>
+    </datetime>
+   </property>
+   <property name="displayFormat">
+    <string>d/MM/yyyy</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>fonhis</zorder>
   <zorder>log</zorder>
-  <zorder>registro</zorder>
   <zorder>bus</zorder>
   <zorder>nusu</zorder>
   <zorder>fdesde</zorder>
   <zorder>tdesde</zorder>
   <zorder>thasta</zorder>
-  <zorder>fhasta</zorder>
   <zorder>label</zorder>
   <zorder>tablat</zorder>
   <zorder>cusu</zorder>
+  <zorder>registro2</zorder>
+  <zorder>fhasta</zorder>
  </widget>
  <resources>
   <include location="imagenes/imagen.qrc"/>

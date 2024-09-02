@@ -30,27 +30,31 @@ class Ui_guia(object):
         icon.addFile(u":/p/em.png", QSize(), QIcon.Normal, QIcon.Off)
         guia.setWindowIcon(icon)
         guia.setStyleSheet(u"background-color: rgb(197, 197, 197);")
-        self.label = QLabel(guia)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(400, 20, 381, 41))
+        self.manual = QLabel(guia)
+        self.manual.setObjectName(u"manual")
+        self.manual.setGeometry(QRect(350, 30, 391, 61))
         font = QFont()
         font.setFamilies([u"Arial Black"])
         font.setPointSize(15)
         font.setBold(True)
-        self.label.setFont(font)
+        self.manual.setFont(font)
+        self.manual.setPixmap(QPixmap(u":/p/man.png"))
+        self.manual.setScaledContents(True)
         self.textEdit = QTextEdit(guia)
         self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setGeometry(QRect(40, 140, 1001, 701))
+        self.textEdit.setGeometry(QRect(50, 140, 1001, 701))
         font1 = QFont()
         font1.setFamilies([u"Nirmala UI"])
         self.textEdit.setFont(font1)
         self.textEdit.setStyleSheet(u"background-color: rgb(238, 235, 255);")
-        self.label_2 = QLabel(guia)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(20, 60, 1291, 81))
-        font2 = QFont()
-        font2.setPointSize(11)
-        self.label_2.setFont(font2)
+        self.fonhis = QLabel(guia)
+        self.fonhis.setObjectName(u"fonhis")
+        self.fonhis.setGeometry(QRect(-10, -10, 1311, 951))
+        self.fonhis.setPixmap(QPixmap(u":/p/gra.png"))
+        self.fonhis.setScaledContents(True)
+        self.fonhis.raise_()
+        self.manual.raise_()
+        self.textEdit.raise_()
 
         self.retranslateUi(guia)
 
@@ -59,12 +63,12 @@ class Ui_guia(object):
 
     def retranslateUi(self, guia):
         guia.setWindowTitle(QCoreApplication.translate("guia", u"Guia de Usuario", None))
-        self.label.setText(QCoreApplication.translate("guia", u"MANUAL DE USUARIO", None))
+        self.manual.setText("")
         self.textEdit.setHtml(QCoreApplication.translate("guia", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Nirmala UI'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
-        self.label_2.setText(QCoreApplication.translate("guia", u"Acontinuaci\u00f3n se presenta la gu\u00eda de usuario para el registro de tareas diarias y  respectiva busqueda de tareas registradas en el historial", None))
+        self.fonhis.setText("")
     # retranslateUi
 

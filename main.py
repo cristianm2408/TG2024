@@ -1,5 +1,4 @@
 import sys
-import sqlite3
 from PyQt6 import uic
 from PyQt6.QtWidgets import QMessageBox
 from PyQt6.QtGui import QPixmap
@@ -79,7 +78,7 @@ class Mainwindow():
         self.main.busv.setIcon(icono)
 
 
-        ImagBUG = QPixmap("imagenes/in.png")
+        ImagBUG = QPixmap("imagenes/guia.png")
         icono = QIcon(ImagBUG)
         self.main.guiau.setIcon(icono)
 
@@ -111,6 +110,7 @@ class Mainwindow():
         self.main.busf.clicked.connect(self.abrirhistorialf)
         self.main.busv.clicked.connect(self.abrirhistorialv)
         self.main.acerca.triggered.connect(self.abririnfo)
+        self.main.manual.triggered.connect(self.abrirguia)
         self.main.guiau.clicked.connect(self.abrirguia)
         self.main.eli.clicked.connect(self.abrireli)
         self.baset = uic.loadUi("base.ui")
@@ -138,12 +138,17 @@ class Mainwindow():
     def abrirregistro(self):
         self.registro.reg.clicked.connect(self.registrarTarea)
         self.registro.setWindowIcon(QIcon('imagenes/em.png'))
+
         self.registro.logo.setText("")
         ImagEM = QPixmap("imagenes/FOsp.png")
         self.registro.logo.setPixmap(ImagEM)
 
+        self.registro.registro.setText("")
+        ImagEM = QPixmap("imagenes/registro.png")
+        self.registro.registro.setPixmap(ImagEM)
+
         self.registro.fon.setText("")
-        ImagEM = QPixmap("imagenes/cla.png")
+        ImagEM = QPixmap("imagenes/gra.png")
         self.registro.fon.setPixmap(ImagEM)
         
     
@@ -154,13 +159,13 @@ class Mainwindow():
     def abrirbase(self):
          
         
-        self.baset.tablab.setColumnWidth(0,150) #usuario
+        self.baset.tablab.setColumnWidth(0,120) #usuario
         self.baset.tablab.setColumnWidth(1,150) #VLAN
         self.baset.tablab.setColumnWidth(2,110) #tipot
-        self.baset.tablab.setColumnWidth(3,90)  #ticket
+        self.baset.tablab.setColumnWidth(3,100)  #ticket
         self.baset.tablab.setColumnWidth(4,200) #equipos
-        self.baset.tablab.setColumnWidth(5,120) #solicitud
-        self.baset.tablab.setColumnWidth(6,260) #solucion
+        self.baset.tablab.setColumnWidth(5,200) #solicitud
+        self.baset.tablab.setColumnWidth(6,190) #solucion
         self.baset.tablab.setColumnWidth(7,70) #realizad
         self.baset.tablab.setColumnWidth(8,150) #fecha
 
@@ -173,8 +178,13 @@ class Mainwindow():
         ImagEM = QPixmap("imagenes/FOsp.png")
         self.baset.log.setPixmap(ImagEM)
 
+        self.baset.registro.setText("")
+        ImagEMT = QPixmap("imagenes/histo.png")
+        self.baset.registro.setPixmap(ImagEMT)
+
+
         self.baset.fonhisb.setText("")
-        ImagEM = QPixmap("imagenes/cla.png")
+        ImagEM = QPixmap("imagenes/gra.png")
         self.baset.fonhisb.setPixmap(ImagEM)    
         
         fila=0
@@ -209,22 +219,28 @@ class Mainwindow():
         self.historial.bus.clicked.connect(self.buscar)
         self.historial.setWindowIcon(QIcon('imagenes/em.png'))
 
+        
+        self.historial.registro2.setText("")
+        ImagLO = QPixmap("imagenes/histo.png")
+        self.historial.registro2.setPixmap(ImagLO)
+
+
         self.historial.log.setText("")
         ImagLO = QPixmap("imagenes/FOsp.png")
         self.historial.log.setPixmap(ImagLO)
 
         self.historial.fonhis.setText("")
-        ImagFOON = QPixmap("imagenes/cla.png")
+        ImagFOON = QPixmap("imagenes/gra.png")
         self.historial.fonhis.setPixmap(ImagFOON)
 
        
-        self.historial.tablat.setColumnWidth(0,150) #usuario
+        self.historial.tablat.setColumnWidth(0,120) #usuario
         self.historial.tablat.setColumnWidth(1,150) #VLAN
         self.historial.tablat.setColumnWidth(2,110) #tipot
-        self.historial.tablat.setColumnWidth(3,90)  #ticket
+        self.historial.tablat.setColumnWidth(3,100)  #ticket
         self.historial.tablat.setColumnWidth(4,200) #equipos
-        self.historial.tablat.setColumnWidth(5,120) #solicitud
-        self.historial.tablat.setColumnWidth(6,260) #solucion
+        self.historial.tablat.setColumnWidth(5,200) #solicitud
+        self.historial.tablat.setColumnWidth(6,190) #solucion
         self.historial.tablat.setColumnWidth(7,70) #realizad
         self.historial.tablat.setColumnWidth(8,150) #fecha
 
@@ -242,18 +258,24 @@ class Mainwindow():
         ImagLO = QPixmap("imagenes/FOsp.png")
         self.historialf.log.setPixmap(ImagLO)
 
+        
+        self.historialf.registro3.setText("")
+        ImagLOF = QPixmap("imagenes/histo.png")
+        self.historialf.registro3.setPixmap(ImagLOF)
+
+
         self.historialf.fonhis.setText("")
-        ImagFOON = QPixmap("imagenes/cla.png")
+        ImagFOON = QPixmap("imagenes/gra.png")
         self.historialf.fonhis.setPixmap(ImagFOON)
 
       
-        self.historialf.tablatf.setColumnWidth(0,150) #usuario
+        self.historialf.tablatf.setColumnWidth(0,120) #usuario
         self.historialf.tablatf.setColumnWidth(1,150) #VLAN
         self.historialf.tablatf.setColumnWidth(2,110) #tipot
-        self.historialf.tablatf.setColumnWidth(3,90)  #ticket
+        self.historialf.tablatf.setColumnWidth(3,100)  #ticket
         self.historialf.tablatf.setColumnWidth(4,200) #equipos
-        self.historialf.tablatf.setColumnWidth(5,120) #solicitud
-        self.historialf.tablatf.setColumnWidth(6,260) #solucion
+        self.historialf.tablatf.setColumnWidth(5,200) #solicitud
+        self.historialf.tablatf.setColumnWidth(6,190) #solucion
         self.historialf.tablatf.setColumnWidth(7,70) #realizad
         self.historialf.tablatf.setColumnWidth(8,150) #fecha
 
@@ -271,18 +293,23 @@ class Mainwindow():
         ImagLO = QPixmap("imagenes/FOsp.png")
         self.historialv.log.setPixmap(ImagLO)
 
+        self.historialv.registro4.setText("")
+        ImagLOF = QPixmap("imagenes/histo.png")
+        self.historialv.registro4.setPixmap(ImagLOF)
+
+
         self.historialv.fonhis.setText("")
-        ImagFOON = QPixmap("imagenes/cla.png")
+        ImagFOON = QPixmap("imagenes/gra.png")
         self.historialv.fonhis.setPixmap(ImagFOON)
 
        
-        self.historialv.tablav.setColumnWidth(0,150) #usuario
+        self.historialv.tablav.setColumnWidth(0,120) #usuario
         self.historialv.tablav.setColumnWidth(1,150) #VLAN
         self.historialv.tablav.setColumnWidth(2,110) #tipot
-        self.historialv.tablav.setColumnWidth(3,90)  #ticket
+        self.historialv.tablav.setColumnWidth(3,100)  #ticket
         self.historialv.tablav.setColumnWidth(4,200) #equipos
-        self.historialv.tablav.setColumnWidth(5,120) #solicitud
-        self.historialv.tablav.setColumnWidth(6,260) #solucion
+        self.historialv.tablav.setColumnWidth(5,200) #solicitud
+        self.historialv.tablav.setColumnWidth(6,190) #solucion
         self.historialv.tablav.setColumnWidth(7,70) #realizad
         self.historialv.tablav.setColumnWidth(8,150) #fecha
     
@@ -303,7 +330,7 @@ class Mainwindow():
         self.historiale.log.setPixmap(ImagEM)
 
         self.historiale.fonhisb.setText("")
-        ImagEM = QPixmap("imagenes/cla.png")
+        ImagEM = QPixmap("imagenes/fonda.png")
         self.historiale.fonhisb.setPixmap(ImagEM)    
         self.historiale.show()
      
@@ -321,6 +348,19 @@ class Mainwindow():
         
         self.guiau.setWindowIcon(QIcon('imagenes/em.png'))
 
+        
+        self.guiau.manual.setText("")
+        ImagLOG = QPixmap("imagenes/man.png")
+        self.guiau.manual.setPixmap(ImagLOG)
+
+        
+        self.guiau.fonhis.setText("")
+        ImagLOGF = QPixmap("imagenes/gra.png")
+        self.guiau.fonhis.setPixmap(ImagLOGF)
+       
+      
+       
+      
 
       
         self.guiau.show()
@@ -369,12 +409,12 @@ class Mainwindow():
             objData = Tareadata() 
             mBox = QMessageBox()
             if objData.regis(info=tarea):
-                mBox.setText("Tarea registrada")
-                mBox.exec()   
+                mBox.information(self.registro, "Registro", "¡Nueva tarea registrada!")
+                  
                 self.limpiarcampos()
             else:
-                mBox.setText("Tarea NO registrada")
-                mBox.exec()   
+                mBox.information(self.registro, "Error", "Tarea NO registrada")
+             
               
            
 
@@ -396,8 +436,12 @@ class Mainwindow():
 
 
     def buscar(self):
-        his = Historialdata(self.historiale)
-        data =his.buscarfecha(self.historial.cusu.text(),self.historial.fdesde.text(),self.historial.fhasta.text())
+        hisu = Historialdata(self.historiale)
+        data =hisu.buscarfecha(self.historial.cusu.text(),self.historial.fdesde.text(),self.historial.fhasta.text())
+
+        if not data:  
+         QMessageBox.information(self.historial, "Sin resultados", "No hay tareas registradas con este usuario")
+         return  
         fila=0
         self.historial.tablat.setRowCount(len(data))
         for item in data:
@@ -424,6 +468,9 @@ class Mainwindow():
     def buscarf(self):
         hisf = Historialdata(self.historiale)
         dataf =hisf.buscarfechaf(self.historialf.hdesdef.text(),self.historialf.hhastaf.text())
+        if not dataf:  
+         QMessageBox.information(self.historialf, "Sin resultados", "No hay tareas registradas en el rango de fechas")
+         return  
         fila=0
         self.historialf.tablatf.setRowCount(len(dataf))
         for item in dataf:
@@ -447,6 +494,9 @@ class Mainwindow():
     def buscarv(self):
         hisv = Historialdata(self.historiale)
         datav =hisv.buscarfechav(self.historialv.nvlan.currentText(),"01/01/1970", "31/12/3099")
+        if not datav:  
+         QMessageBox.information(self.historialv, "Sin resultados", "No hay tareas registradas con esta VLAN")
+         return  
         fila=0
         self.historialv.tablav.setRowCount(len(datav))
         for item in datav:

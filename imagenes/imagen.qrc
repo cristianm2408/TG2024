@@ -1,5 +1,12 @@
 <RCC>
   <qresource prefix="p">
+    <file>man.png</file>
+    <file>guia.png</file>
+    <file>registro.png</file>
+    <file>histo.png</file>
+    <file>pas.png</file>
+    <file>claro.png</file>
+    <file>fo.png</file>
     <file>del.png</file>
     <file>gren.png</file>
     <file>cod.png</file>

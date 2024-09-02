@@ -19,7 +19,6 @@ from PySide6.QtWidgets import (QAbstractItemView, QApplication, QDialog, QHeader
     QLabel, QSizePolicy, QTableWidget, QTableWidgetItem,
     QWidget)
 import imagen_rc
-import imagen_rc
 
 class Ui_historial(object):
     def setupUi(self, historial):
@@ -42,19 +41,21 @@ class Ui_historial(object):
         self.log.setScaledContents(True)
         self.registro = QLabel(historial)
         self.registro.setObjectName(u"registro")
-        self.registro.setGeometry(QRect(470, 30, 461, 51))
+        self.registro.setGeometry(QRect(440, 30, 461, 61))
         font1 = QFont()
         font1.setFamilies([u"Segoe UI Black"])
         font1.setPointSize(19)
         font1.setBold(True)
         self.registro.setFont(font1)
+        self.registro.setPixmap(QPixmap(u":/p/histo.png"))
+        self.registro.setScaledContents(True)
         self.fonhisb = QLabel(historial)
         self.fonhisb.setObjectName(u"fonhisb")
         self.fonhisb.setGeometry(QRect(0, -20, 1331, 931))
         font2 = QFont()
         font2.setFamilies([u"Lucida Bright"])
         self.fonhisb.setFont(font2)
-        self.fonhisb.setPixmap(QPixmap(u":/p/cla.png"))
+        self.fonhisb.setPixmap(QPixmap(u":/p/gra.png"))
         self.fonhisb.setScaledContents(True)
         self.tablab = QTableWidget(historial)
         if (self.tablab.columnCount() < 9):
@@ -106,7 +107,7 @@ class Ui_historial(object):
     def retranslateUi(self, historial):
         historial.setWindowTitle(QCoreApplication.translate("historial", u"Tareas", None))
         self.log.setText("")
-        self.registro.setText(QCoreApplication.translate("historial", u"HISTORIAL DE TAREAS", None))
+        self.registro.setText("")
         self.fonhisb.setText("")
         ___qtablewidgetitem = self.tablab.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("historial", u"Usuario", None));

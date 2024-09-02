@@ -44,6 +44,8 @@ class Ui_Main(object):
         self.guia.setObjectName(u"guia")
         self.buscarv = QAction(Main)
         self.buscarv.setObjectName(u"buscarv")
+        self.manual = QAction(Main)
+        self.manual.setObjectName(u"manual")
         self.centralwidget = QWidget(Main)
         self.centralwidget.setObjectName(u"centralwidget")
         self.emtelco = QLabel(self.centralwidget)
@@ -245,7 +247,7 @@ class Ui_Main(object):
         self.main5.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
         self.guiau = QPushButton(self.centralwidget)
         self.guiau.setObjectName(u"guiau")
-        self.guiau.setGeometry(QRect(10, 20, 101, 111))
+        self.guiau.setGeometry(QRect(0, 0, 101, 111))
         self.guiau.setCursor(QCursor(Qt.PointingHandCursor))
         self.guiau.setAutoFillBackground(False)
         self.guiau.setStyleSheet(u"QPushButton {\n"
@@ -253,9 +255,9 @@ class Ui_Main(object):
 "    border: none; \n"
 "}")
         icon6 = QIcon()
-        icon6.addFile(u":/p/in.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u":/p/guia.png", QSize(), QIcon.Normal, QIcon.Off)
         self.guiau.setIcon(icon6)
-        self.guiau.setIconSize(QSize(88, 120))
+        self.guiau.setIconSize(QSize(60, 100))
         self.gest = QLabel(self.centralwidget)
         self.gest.setObjectName(u"gest")
         self.gest.setGeometry(QRect(240, 10, 541, 51))
@@ -263,7 +265,7 @@ class Ui_Main(object):
         self.gest.setScaledContents(True)
         self.fondo = QLabel(self.centralwidget)
         self.fondo.setObjectName(u"fondo")
-        self.fondo.setGeometry(QRect(-10, -200, 1101, 961))
+        self.fondo.setGeometry(QRect(-20, -200, 1101, 961))
         self.fondo.setAutoFillBackground(False)
         self.fondo.setStyleSheet(u"background-color: rgb(1, 27, 123);")
         self.fondo.setPixmap(QPixmap(u":/p/fonda.png"))
@@ -340,6 +342,7 @@ class Ui_Main(object):
         Main.setStatusBar(self.statusbar)
 
         self.menubar.addAction(self.menuinfo.menuAction())
+        self.menuinfo.addAction(self.manual)
         self.menuinfo.addAction(self.acerca)
 
         self.retranslateUi(Main)
@@ -358,6 +361,7 @@ class Ui_Main(object):
         self.buscarf.setText(QCoreApplication.translate("Main", u"Buscar por fecha", None))
         self.guia.setText(QCoreApplication.translate("Main", u"Gu\u00eda de usuario", None))
         self.buscarv.setText(QCoreApplication.translate("Main", u"Buscar por VLAN y fecha", None))
+        self.manual.setText(QCoreApplication.translate("Main", u"Gu\u00eda de Usuario", None))
         self.emtelco.setText("")
         self.regt.setText("")
         self.main1.setText(QCoreApplication.translate("Main", u"<html><head/><body><p><span style=\" color:#ffffff;\">REGISTRAR TAREA</span></p></body></html>", None))
@@ -380,6 +384,6 @@ class Ui_Main(object):
         self.eli.setText("")
         self.regtarea6.setText(QCoreApplication.translate("Main", u"<html><head/><body><p><br/></p></body></html>", None))
         self.main6.setText(QCoreApplication.translate("Main", u"<html><head/><body><p><span style=\" color:#ffffff;\">ELIMINAR TAREA</span></p></body></html>", None))
-        self.menuinfo.setTitle(QCoreApplication.translate("Main", u"Info", None))
+        self.menuinfo.setTitle(QCoreApplication.translate("Main", u"Archivo", None))
     # retranslateUi
 

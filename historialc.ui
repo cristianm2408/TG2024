@@ -56,32 +56,11 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="registro">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>20</y>
-     <width>461</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Black</family>
-     <pointsize>19</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>HISTORIAL DE TAREAS</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="buscarv">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>210</y>
+     <x>850</x>
+     <y>190</y>
      <width>141</width>
      <height>61</height>
     </rect>
@@ -98,8 +77,17 @@
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(123, 221, 221);
-border-radius:8px</string>
+    <string notr="true">
+QPushButton {
+    background-color: #7BDDDD;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+    background-color: #0EC2C2;
+}</string>
    </property>
    <property name="text">
     <string>Buscar</string>
@@ -109,7 +97,7 @@ border-radius:8px</string>
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>180</y>
+     <y>200</y>
      <width>241</width>
      <height>41</height>
     </rect>
@@ -123,7 +111,7 @@ border-radius:8px</string>
     </font>
    </property>
    <property name="text">
-    <string>VLAN-Campaña</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;VLAN-Campaña&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="fonhis">
@@ -156,7 +144,7 @@ border-radius:8px</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="imagenes/imagen.qrc">:/p/cla.png</pixmap>
+    <pixmap resource="imagenes/imagen.qrc">:/p/gra.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -167,24 +155,25 @@ border-radius:8px</string>
     <rect>
      <x>270</x>
      <y>120</y>
-     <width>811</width>
+     <width>891</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Arial Black</family>
      <pointsize>14</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Buscar tareas teniendo en cuenta VLAN-Campaña y fecha de registro</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;- Buscar tareas teniendo en cuenta VLAN-Campaña&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QComboBox" name="nvlan">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>230</y>
+     <x>520</x>
+     <y>200</y>
      <width>251</width>
      <height>41</height>
     </rect>
@@ -297,7 +286,7 @@ border-radius:8px</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>320</y>
+     <y>290</y>
      <width>1330</width>
      <height>505</height>
     </rect>
@@ -398,14 +387,41 @@ border-radius:8px</string>
     </property>
    </column>
   </widget>
+  <widget class="QLabel" name="registro4">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>20</y>
+     <width>461</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Black</family>
+     <pointsize>19</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes/imagen.qrc">:/p/histo.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>fonhis</zorder>
   <zorder>log</zorder>
-  <zorder>registro</zorder>
   <zorder>buscarv</zorder>
   <zorder>vlan</zorder>
   <zorder>texto</zorder>
   <zorder>nvlan</zorder>
   <zorder>tablav</zorder>
+  <zorder>registro4</zorder>
  </widget>
  <resources>
   <include location="imagenes/imagen.qrc"/>
