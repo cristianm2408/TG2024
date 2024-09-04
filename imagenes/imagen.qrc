@@ -1,6 +1,13 @@
 <RCC>
   <qresource prefix="p">
     <file>man.png</file>
+    <file>guia1.jpg</file>
+    <file>guia2.jpg</file>
+    <file>guia3.jpg</file>
+    <file>guia4.jpg</file>
+    <file>guia5.jpg</file>
+    <file>guia6.jpg</file>
+    <file>guia7.jpg</file>
     <file>guia.png</file>
     <file>registro.png</file>
     <file>histo.png</file>

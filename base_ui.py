@@ -24,9 +24,9 @@ class Ui_historial(object):
     def setupUi(self, historial):
         if not historial.objectName():
             historial.setObjectName(u"historial")
-        historial.resize(1329, 805)
-        historial.setMinimumSize(QSize(1329, 805))
-        historial.setMaximumSize(QSize(1329, 805))
+        historial.resize(1330, 805)
+        historial.setMinimumSize(QSize(1330, 805))
+        historial.setMaximumSize(QSize(1330, 805))
         font = QFont()
         font.setPointSize(1)
         historial.setFont(font)
@@ -51,7 +51,7 @@ class Ui_historial(object):
         self.registro.setScaledContents(True)
         self.fonhisb = QLabel(historial)
         self.fonhisb.setObjectName(u"fonhisb")
-        self.fonhisb.setGeometry(QRect(0, -20, 1331, 931))
+        self.fonhisb.setGeometry(QRect(0, 0, 1431, 931))
         font2 = QFont()
         font2.setFamilies([u"Lucida Bright"])
         self.fonhisb.setFont(font2)

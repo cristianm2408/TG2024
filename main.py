@@ -163,7 +163,7 @@ class Mainwindow():
         self.baset.tablab.setColumnWidth(1,150) #VLAN
         self.baset.tablab.setColumnWidth(2,110) #tipot
         self.baset.tablab.setColumnWidth(3,100)  #ticket
-        self.baset.tablab.setColumnWidth(4,200) #equipos
+        self.baset.tablab.setColumnWidth(4,180) #equipos
         self.baset.tablab.setColumnWidth(5,200) #solicitud
         self.baset.tablab.setColumnWidth(6,190) #solucion
         self.baset.tablab.setColumnWidth(7,70) #realizad
@@ -348,6 +348,35 @@ class Mainwindow():
         
         self.guiau.setWindowIcon(QIcon('imagenes/em.png'))
 
+        self.guiau.guia1.setText("")
+        ImagEMG = QPixmap("imagenes/guia1.jpg")
+        self.guiau.guia1.setPixmap(ImagEMG)
+
+        self.guiau.guia2.setText("")
+        ImagEMG = QPixmap("imagenes/guia2.jpg")
+        self.guiau.guia2.setPixmap(ImagEMG)
+
+        self.guiau.guia3.setText("")
+        ImagEMG = QPixmap("imagenes/guia3.jpg")
+        self.guiau.guia3.setPixmap(ImagEMG)
+        
+        self.guiau.guia4.setText("")
+        ImagEMG = QPixmap("imagenes/guia4.jpg")
+        self.guiau.guia4.setPixmap(ImagEMG)
+
+        self.guiau.guia5.setText("")
+        ImagEMG = QPixmap("imagenes/guia5.jpg")
+        self.guiau.guia5.setPixmap(ImagEMG)
+
+        self.guiau.guia6.setText("")
+        ImagEMG = QPixmap("imagenes/guia6.jpg")
+        self.guiau.guia6.setPixmap(ImagEMG)
+
+        self.guiau.guia7.setText("")
+        ImagEMG = QPixmap("imagenes/guia7.jpg")
+        self.guiau.guia7.setPixmap(ImagEMG)
+
+
         
         self.guiau.manual.setText("")
         ImagLOG = QPixmap("imagenes/man.png")
@@ -357,6 +386,7 @@ class Mainwindow():
         self.guiau.fonhis.setText("")
         ImagLOGF = QPixmap("imagenes/gra.png")
         self.guiau.fonhis.setPixmap(ImagLOGF)
+       
        
       
        
@@ -373,22 +403,42 @@ class Mainwindow():
     def registrarTarea(self):
 
 
+        if len(self.registro.usu.text())<4:
+            mbox = QMessageBox()
+            mbox.information(self.registro, "Alerta", "Debe ingresar usuario")
+            self.registro.usu.setFocus()
     
-        if self.registro.rvlan.currentText() =="---Seleccione una opción":
-            mBox = QMessageBox()
-            mBox.setText("Debe seleccionar la campaña")
-            mBox.exec()
+        elif self.registro.rvlan.currentText() =="---Seleccione una opción":
+            mbox = QMessageBox()
+            mbox.information(self.registro, "Alerta", "Debe seleccionar la VLAN")
             self.registro.rvlan.setFocus()
+
         elif self.registro.tarea.currentText() =="---Seleccione una opción":
-            mBox = QMessageBox()
-            mBox.setText("Debe seleccionar tipo de tarea")
-            mBox.exec()
+            mbox = QMessageBox()
+            mbox.information(self.registro, "Alerta", "Debe seleccionar tipo de tarea")
             self.registro.tarea.setFocus()
+
         elif len(self.registro.nso.text())<4:
-            mBox = QMessageBox()
-            mBox.setText("Debe ingresar ticket válido")
-            mBox.exec()
+            mbox = QMessageBox()
+            mbox.information(self.registro, "Alerta", "Debe ingresar ticket válido")
             self.registro.nso.setFocus()
+
+        elif len(self.registro.equi.toPlainText())<4:
+            mbox = QMessageBox()
+            mbox.information(self.registro, "Alerta", "Ingrese el nombre de los equipos")
+            self.registro.equi.setFocus()
+        
+        elif len(self.registro.det.toPlainText())<4:
+            mbox = QMessageBox()
+            mbox.information(self.registro, "Alerta", "Ingrese descripción de solicitud")
+            self.registro.equi.setFocus()
+
+        elif len(self.registro.dets.toPlainText())<4:
+            mbox = QMessageBox()
+            mbox.information(self.registro, "Alerta", "Ingrese detalles de solucion")
+            self.registro.equi.setFocus()
+       
+       
        
         else:
             
