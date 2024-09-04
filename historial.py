@@ -13,6 +13,7 @@ class Historialdata():
         self.db = con.Conexion().conectar() 
         self.cursor = self.db.cursor()
         
+   
 
    def basedatos(self, bdesde, bhasta):
       self.db = con.Conexion().conectar()
@@ -29,52 +30,50 @@ class Historialdata():
 
    def buscarfecha(self, usu, desde, hasta):
 
-      
       fdia = datetime.strptime(hasta, '%d/%m/%Y')
-      fdia += timedelta(days=1) 
+      fdia += timedelta(days=1)  
       hasta = fdia.strftime('%d/%m/%Y')
    
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()
-      sqlbuscaru = """
+      sqlbuscar = """
       SELECT * FROM tareas  
       WHERE usuario='{}' AND fecha>='{}' AND fecha<='{}'
       ORDER BY fecha DESC
       """.format(usu,desde, hasta)
-      resu = self.cursor.execute(sqlbuscaru)
-      datau = resu.fetchall()
-      return datau
+      res = self.cursor.execute(sqlbuscar)
+      data = res.fetchall()
+      return data
    
    def buscarfechaf(self, fdesde, fhasta):
 
-      fdia2 = datetime.strptime(fhasta, '%d/%m/%Y')
-      fdia2 += timedelta(days=1) 
-      fhasta = fdia2.strftime('%d/%m/%Y')
-
+      adia = datetime.strptime(fhasta, '%d/%m/%Y')
+      adia += timedelta(days=1)  
+      fhasta = adia.strftime('%d/%m/%Y')
 
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()
-      sqlbuscarf = """
+      sqlbuscar = """
       SELECT * FROM tareas  
       WHERE fecha>='{}' AND fecha<='{}'
       ORDER BY fecha DESC
       """.format(fdesde, fhasta)
-      resf = self.cursor.execute(sqlbuscarf)
-      dataf = resf.fetchall()
-      return dataf
+      res = self.cursor.execute(sqlbuscar)
+      data = res.fetchall()
+      return data
    
    
    def buscarfechav(self, vlan, vdesde, vhasta):
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()
-      sqlbuscarv = """
+      sqlbuscar = """
       SELECT * FROM tareas  
       WHERE vlan='{}' AND fecha>='{}' AND fecha<='{}'
       ORDER BY fecha DESC
       """.format(vlan, vdesde, vhasta)
-      resv = self.cursor.execute(sqlbuscarv)
-      datav = resv.fetchall()
-      return datav
+      res = self.cursor.execute(sqlbuscar)
+      data = res.fetchall()
+      return data
    
    def eliminar_tarea_por_ticket(self):
         # Obtener el número de ticket desde el QLineEdit en historiale

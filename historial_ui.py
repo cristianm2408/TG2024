@@ -181,7 +181,7 @@ class Ui_historial(object):
         self.bus.setText(QCoreApplication.translate("historial", u"Buscar", None))
         self.nusu.setText(QCoreApplication.translate("historial", u"<html><head/><body><p><span style=\" color:#ffffff;\"> Nombre de usuario</span></p></body></html>", None))
         self.fonhis.setText("")
-        self.fdesde.setDisplayFormat(QCoreApplication.translate("historial", u"d/MM/yyyy", None))
+        self.fdesde.setDisplayFormat(QCoreApplication.translate("historial", u"dd/MM/yyyy", None))
         self.tdesde.setText(QCoreApplication.translate("historial", u"<html><head/><body><p><span style=\" color:#ffffff;\">Desde</span></p></body></html>", None))
         self.thasta.setText(QCoreApplication.translate("historial", u"<html><head/><body><p><span style=\" color:#ffffff;\">Hasta</span></p></body></html>", None))
         self.label.setText(QCoreApplication.translate("historial", u"<html><head/><body><p><span style=\" color:#ffffff;\">- Buscar tareas teniendo en cuenta el usuario y fecha de registro</span></p></body></html>", None))
@@ -204,6 +204,6 @@ class Ui_historial(object):
         ___qtablewidgetitem8 = self.tablat.horizontalHeaderItem(8)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("historial", u"Fecha", None));
         self.registro2.setText("")
-        self.fhasta.setDisplayFormat(QCoreApplication.translate("historial", u"d/MM/yyyy", None))
+        self.fhasta.setDisplayFormat(QCoreApplication.translate("historial", u"dd/MM/yyyy", None))
     # retranslateUi
 

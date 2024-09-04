@@ -146,7 +146,7 @@ QPushButton:hover {
     </datetime>
    </property>
    <property name="displayFormat">
-    <string>d/MM/yyyy</string>
+    <string>dd/MM/yyyy</string>
    </property>
    <property name="calendarPopup">
     <bool>true</bool>
@@ -223,7 +223,7 @@ QPushButton:hover {
     </datetime>
    </property>
    <property name="displayFormat">
-    <string>d/MM/yyyy</string>
+    <string>dd/MM/yyyy</string>
    </property>
    <property name="calendarPopup">
     <bool>true</bool>

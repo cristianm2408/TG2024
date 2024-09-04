@@ -168,10 +168,10 @@ class Ui_historial(object):
         self.log.setText("")
         self.hbus.setText(QCoreApplication.translate("historial", u"Buscar", None))
         self.fonhis.setText("")
-        self.hdesdef.setDisplayFormat(QCoreApplication.translate("historial", u"d/MM/yyyy", None))
+        self.hdesdef.setDisplayFormat(QCoreApplication.translate("historial", u"dd/MM/yyyy", None))
         self.hdesde.setText(QCoreApplication.translate("historial", u"<html><head/><body><p><span style=\" color:#ffffff;\">Desde</span></p></body></html>", None))
         self.hhasta.setText(QCoreApplication.translate("historial", u"<html><head/><body><p><span style=\" color:#ffffff;\">Hasta</span></p></body></html>", None))
-        self.hhastaf.setDisplayFormat(QCoreApplication.translate("historial", u"d/MM/yyyy", None))
+        self.hhastaf.setDisplayFormat(QCoreApplication.translate("historial", u"dd/MM/yyyy", None))
         ___qtablewidgetitem = self.tablatf.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("historial", u"Usuario", None));
         ___qtablewidgetitem1 = self.tablatf.horizontalHeaderItem(1)
