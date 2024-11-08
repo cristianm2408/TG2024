@@ -41,7 +41,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>10</y>
+     <y>100</y>
      <width>141</width>
      <height>131</height>
     </rect>
@@ -166,11 +166,83 @@ QPushButton:hover {
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#03197b;&quot;&gt;Ingrese número de ticket de la tarea que desea eliminar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="atras6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton {
+   
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+  
+	background-color: rgb(162, 182, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="imagenes/imagen.qrc">
+     <normaloff>:/p/volver.png</normaloff>:/p/volver.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>100</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="atra_2">
+   <property name="geometry">
+    <rect>
+     <x>-40</x>
+     <y>70</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Volver</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
   <zorder>fonhisb</zorder>
   <zorder>log</zorder>
   <zorder>eliminar</zorder>
   <zorder>nticket</zorder>
   <zorder>label</zorder>
+  <zorder>atras6</zorder>
+  <zorder>atra_2</zorder>
  </widget>
  <resources>
   <include location="imagenes/imagen.qrc"/>

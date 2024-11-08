@@ -37,25 +37,6 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QLabel" name="log">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>10</y>
-     <width>141</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="imagenes/imagen.qrc">:/p/FOsp.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QLabel" name="registro">
    <property name="geometry">
     <rect>
@@ -212,10 +193,81 @@
     </property>
    </column>
   </widget>
+  <widget class="QPushButton" name="atras2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton {
+   
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+  
+	background-color: rgb(162, 182, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="imagenes/imagen.qrc">
+     <normaloff>:/p/volver.png</normaloff>:/p/volver.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>100</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="atra">
+   <property name="geometry">
+    <rect>
+     <x>-30</x>
+     <y>90</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Volver</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
   <zorder>fonhisb</zorder>
-  <zorder>log</zorder>
   <zorder>registro</zorder>
   <zorder>tablab</zorder>
+  <zorder>atras2</zorder>
+  <zorder>atra</zorder>
  </widget>
  <resources>
   <include location="imagenes/imagen.qrc"/>

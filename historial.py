@@ -14,7 +14,6 @@ class Historialdata():
         self.cursor = self.db.cursor()
         
    
-
    def basedatos(self, bdesde, bhasta):
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()
@@ -27,12 +26,11 @@ class Historialdata():
       data = res.fetchall()
       return data
 
-
    def buscarfecha(self, usu, desde, hasta):
 
-      fdia = datetime.strptime(hasta, '%d/%m/%Y')
+      fdia = datetime.strptime(hasta, '%Y/%m/%d')
       fdia += timedelta(days=1)  
-      hasta = fdia.strftime('%d/%m/%Y')
+      hasta = fdia.strftime('%Y/%m/%d')
    
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()
@@ -47,9 +45,9 @@ class Historialdata():
    
    def buscarfechaf(self, fdesde, fhasta):
 
-      adia = datetime.strptime(fhasta, '%d/%m/%Y')
+      adia = datetime.strptime(fhasta, '%Y/%m/%d')
       adia += timedelta(days=1)  
-      fhasta = adia.strftime('%d/%m/%Y')
+      fhasta = adia.strftime('%Y/%m/%d')
 
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()

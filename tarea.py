@@ -37,7 +37,7 @@ class Tareadata():
       
    def regis(self,info:Tarea):
       
-      fecha = datetime.now().strftime("%d/%m/%Y, %H:%M")
+      fecha = datetime.now().strftime("%Y/%m/%d, %H:%M")
       self.db = con.Conexion().conectar()
       self.cursor = self.db.cursor()
       self.cursor.execute("""

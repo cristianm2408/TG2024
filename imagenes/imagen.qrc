@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="p">
+    <file>volver.png</file>
     <file>man.png</file>
     <file>guia1.jpg</file>
     <file>guia2.jpg</file>

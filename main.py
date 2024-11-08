@@ -15,8 +15,10 @@ from PyQt6.QtWidgets import QTableWidgetItem
 from PyQt6.QtWidgets import QLabel
 from PyQt6.QtWidgets import QWidget
 from PyQt6.QtWidgets import QVBoxLayout
+from PyQt6.QtWidgets import QScrollArea
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QTextEdit
 
 
 import fitz 
@@ -136,6 +138,9 @@ class Mainwindow():
         
 
     def abrirregistro(self):
+
+        self.main.close()
+        self.registro.atras.clicked.connect(self.volver_al_menu)
         self.registro.reg.clicked.connect(self.registrarTarea)
         self.registro.setWindowIcon(QIcon('imagenes/em.png'))
 
@@ -150,6 +155,10 @@ class Mainwindow():
         self.registro.fon.setText("")
         ImagEM = QPixmap("imagenes/gra.png")
         self.registro.fon.setPixmap(ImagEM)
+
+        ImagA = QPixmap("imagenes/volver.png")
+        icono = QIcon(ImagA)
+        self.registro.atras.setIcon(icono)
         
     
     
@@ -157,7 +166,10 @@ class Mainwindow():
 
     
     def abrirbase(self):
-         
+
+        self.main.close() 
+
+        self.baset.atras2.clicked.connect(self.volver_al_menu)
         
         self.baset.tablab.setColumnWidth(0,120) #usuario
         self.baset.tablab.setColumnWidth(1,150) #VLAN
@@ -172,11 +184,8 @@ class Mainwindow():
         self.baset.setWindowIcon(QIcon('imagenes/em.png'))
          
         his = Historialdata(self.historiale)
-        data = his.basedatos("01/01/1970", "31/12/3099") 
+        data = his.basedatos("1970/01/01", "3099/12/01") 
 
-        self.baset.log.setText("")
-        ImagEM = QPixmap("imagenes/FOsp.png")
-        self.baset.log.setPixmap(ImagEM)
 
         self.baset.registro.setText("")
         ImagEMT = QPixmap("imagenes/histo.png")
@@ -186,6 +195,12 @@ class Mainwindow():
         self.baset.fonhisb.setText("")
         ImagEM = QPixmap("imagenes/gra.png")
         self.baset.fonhisb.setPixmap(ImagEM)    
+
+        
+        ImagAB = QPixmap("imagenes/volver.png")
+        icono = QIcon(ImagAB)
+        self.baset.atras2.setIcon(icono)
+        
         
         fila=0
         self.baset.tablab.setRowCount(len(data))
@@ -209,6 +224,7 @@ class Mainwindow():
 
             fila=fila+1
     
+        self.baset.tablab.cellDoubleClicked.connect(self.mostrar_informacion_tarea)
     
         self.baset.show()    
         self.llenarhistorial()
@@ -216,22 +232,31 @@ class Mainwindow():
 
     def abrirhistorial(self):
 
+        self.main.close()
+        self.historial.atras3.clicked.connect(self.volver_al_menu)
         self.historial.bus.clicked.connect(self.buscar)
         self.historial.setWindowIcon(QIcon('imagenes/em.png'))
+      
+
 
         
         self.historial.registro2.setText("")
         ImagLO = QPixmap("imagenes/histo.png")
         self.historial.registro2.setPixmap(ImagLO)
 
-
-        self.historial.log.setText("")
-        ImagLO = QPixmap("imagenes/FOsp.png")
-        self.historial.log.setPixmap(ImagLO)
-
         self.historial.fonhis.setText("")
         ImagFOON = QPixmap("imagenes/gra.png")
         self.historial.fonhis.setPixmap(ImagFOON)
+
+        
+        self.historial.log.setText("")
+        ImagH = QPixmap("imagenes/FOsp.png")
+        self.historial.log.setPixmap(ImagH)
+
+
+        ImagAH = QPixmap("imagenes/volver.png")
+        icono = QIcon(ImagAH)
+        self.historial.atras3.setIcon(icono)
 
        
         self.historial.tablat.setColumnWidth(0,120) #usuario
@@ -245,28 +270,37 @@ class Mainwindow():
         self.historial.tablat.setColumnWidth(8,150) #fecha
 
 
+        self.historial.tablat.cellDoubleClicked.connect(self.mostrar_informacion_h)
         self.historial.show()
         self.llenarhistorial()
 
 
     def abrirhistorialf(self):
 
+        self.main.close()
+        self.historialf.atras4.clicked.connect(self.volver_al_menu)
         self.historialf.hbus.clicked.connect(self.buscarf)
         self.historialf.setWindowIcon(QIcon('imagenes/em.png'))
 
-        self.historialf.log.setText("")
-        ImagLO = QPixmap("imagenes/FOsp.png")
-        self.historialf.log.setPixmap(ImagLO)
 
-        
         self.historialf.registro3.setText("")
         ImagLOF = QPixmap("imagenes/histo.png")
         self.historialf.registro3.setPixmap(ImagLOF)
+
+        
+        self.historialf.log.setText("")
+        ImagF = QPixmap("imagenes/FOsp.png")
+        self.historialf.log.setPixmap(ImagF)
 
 
         self.historialf.fonhis.setText("")
         ImagFOON = QPixmap("imagenes/gra.png")
         self.historialf.fonhis.setPixmap(ImagFOON)
+
+        
+        ImagF = QPixmap("imagenes/volver.png")
+        icono = QIcon(ImagF)
+        self.historialf.atras4.setIcon(icono)
 
       
         self.historialf.tablatf.setColumnWidth(0,120) #usuario
@@ -280,28 +314,40 @@ class Mainwindow():
         self.historialf.tablatf.setColumnWidth(8,150) #fecha
 
 
-      
+        self.historialf.tablatf.cellDoubleClicked.connect(self.mostrar_informacion_f)
         self.historialf.show()
         self.llenarhistorial()
     
     def abrirhistorialv(self):
 
+        self.main.close()
+        self.historialv.atras5.clicked.connect(self.volver_al_menu)
+
+
+
+        
         self.historialv.buscarv.clicked.connect(self.buscarv)
         self.historialv.setWindowIcon(QIcon('imagenes/em.png'))
 
-        self.historialv.log.setText("")
-        ImagLO = QPixmap("imagenes/FOsp.png")
-        self.historialv.log.setPixmap(ImagLO)
+  
 
         self.historialv.registro4.setText("")
         ImagLOF = QPixmap("imagenes/histo.png")
         self.historialv.registro4.setPixmap(ImagLOF)
+
+        
+        self.historialv.log.setText("")
+        ImagV = QPixmap("imagenes/FOsp.png")
+        self.historialv.log.setPixmap(ImagV)
 
 
         self.historialv.fonhis.setText("")
         ImagFOON = QPixmap("imagenes/gra.png")
         self.historialv.fonhis.setPixmap(ImagFOON)
 
+        ImagV = QPixmap("imagenes/volver.png")
+        icono = QIcon(ImagV)
+        self.historialv.atras5.setIcon(icono)
        
         self.historialv.tablav.setColumnWidth(0,120) #usuario
         self.historialv.tablav.setColumnWidth(1,150) #VLAN
@@ -313,17 +359,17 @@ class Mainwindow():
         self.historialv.tablav.setColumnWidth(7,70) #realizad
         self.historialv.tablav.setColumnWidth(8,150) #fecha
     
-
+        self.historialv.tablav.cellDoubleClicked.connect(self.mostrar_informacion_v)
         self.historialv.show()
         self.llenarhistorial()
 
     def abrireli(self):
+
+        self.main.close()
     # Mostrar la ventana de eliminación
-        
+        self.historiale.atras6.clicked.connect(self.volver_al_menu)
         self.historiale.setWindowIcon(QIcon('imagenes/em.png'))
          
-        
-        
 
         self.historiale.log.setText("")
         ImagEM = QPixmap("imagenes/FOsp.png")
@@ -331,7 +377,13 @@ class Mainwindow():
 
         self.historiale.fonhisb.setText("")
         ImagEM = QPixmap("imagenes/fonda.png")
-        self.historiale.fonhisb.setPixmap(ImagEM)    
+        self.historiale.fonhisb.setPixmap(ImagEM)
+
+        
+        ImagE = QPixmap("imagenes/volver.png")
+        icono = QIcon(ImagE)
+        self.historiale.atras6.setIcon(icono)
+        
         self.historiale.show()
      
 
@@ -484,7 +536,6 @@ class Mainwindow():
 
 
 
-
     def buscar(self):
         hisu = Historialdata(self.historiale)
         data =hisu.buscarfecha(self.historial.cusu.text(),self.historial.fdesde.text(),self.historial.fhasta.text())
@@ -515,7 +566,9 @@ class Mainwindow():
             fila=fila+1
 
 
+
     def buscarf(self):
+        
         hisf = Historialdata(self.historiale)
         dataf =hisf.buscarfechaf(self.historialf.hdesdef.text(),self.historialf.hhastaf.text())
         if not dataf:  
@@ -543,7 +596,7 @@ class Mainwindow():
 
     def buscarv(self):
         hisv = Historialdata(self.historiale)
-        datav =hisv.buscarfechav(self.historialv.nvlan.currentText(),"01/01/1970", "31/12/3099")
+        datav =hisv.buscarfechav(self.historialv.nvlan.currentText(),"1970/01/01", "3099/12/01")
         if not datav:  
          QMessageBox.information(self.historialv, "Sin resultados", "No hay tareas registradas con esta VLAN")
          return  
@@ -567,12 +620,102 @@ class Mainwindow():
 
             fila=fila+1
         
-     
     
+    def mostrar_informacion_tarea(self, row, column):
+    # Obtener el contenido de la celda en la fila y columna seleccionada
+     item = self.baset.tablab.item(row, column)
+     if item:
+        # Crear un cuadro de diálogo personalizado
+        dialogo = QDialog(self.baset)
+        dialogo.setWindowTitle("Información")
+
+        # Crear un QTextEdit para mostrar el texto y hacerlo seleccionable
+        texto_editable = QTextEdit(dialogo)
+        texto_editable.setText(item.text())
+        texto_editable.setReadOnly(True)  # Solo lectura
+
+        # Establecer el diseño del diálogo
+        layout = QVBoxLayout(dialogo)
+        layout.addWidget(texto_editable)
+        dialogo.setLayout(layout)
+
+       
+        dialogo.exec()
+
+    def mostrar_informacion_h(self, row, column):
+    # Obtener el contenido de la celda en la fila y columna seleccionada
+     item = self.historial.tablat.item(row, column)
+     if item:
+        # Crea un cuadro de diálogo personalizado
+        dialogo = QDialog(self.historial)
+        dialogo.setWindowTitle("Información")
+
+        # Crea un QTextEdit para mostrar el texto y hacerlo seleccionable
+        texto_editable = QTextEdit(dialogo)
+        texto_editable.setText(item.text())
+        texto_editable.setReadOnly(True)  # Solo lectura
+
+        # Establece el diseño del diálogo
+        layout = QVBoxLayout(dialogo)
+        layout.addWidget(texto_editable)
+        dialogo.setLayout(layout)
+
+      
+        dialogo.exec()
+
+    def mostrar_informacion_f(self, row, column):
+    # Obtener el contenido de la celda en la fila y columna seleccionada
+     item = self.historialf.tablatf.item(row, column)
+     if item:
+        # Crea un cuadro de diálogo personalizado
+        dialogo = QDialog(self.historialf)
+        dialogo.setWindowTitle("Información")
+
+        # Crea un QTextEdit para mostrar el texto y hacerlo seleccionable
+        texto_editable = QTextEdit(dialogo)
+        texto_editable.setText(item.text())
+        texto_editable.setReadOnly(True)  # Solo lectura
+
+        # Establece el diseño del diálogo
+        layout = QVBoxLayout(dialogo)
+        layout.addWidget(texto_editable)
+        dialogo.setLayout(layout)
+
+      
+        dialogo.exec()
+
+    def mostrar_informacion_v(self, row, column):
+    # Obtener el contenido de la celda en la fila y columna seleccionada
+     item = self.historialv.tablav.item(row, column)
+     if item:
+        # Crea un cuadro de diálogo personalizado
+        dialogo = QDialog(self.historialv)
+        dialogo.setWindowTitle("Información")
+
+        # Crea un QTextEdit para mostrar el texto y hacerlo seleccionable
+        texto_editable = QTextEdit(dialogo)
+        texto_editable.setText(item.text())
+        texto_editable.setReadOnly(True)  # Solo lectura
+
+        # Establece el diseño del diálogo
+        layout = QVBoxLayout(dialogo)
+        layout.addWidget(texto_editable)
+        dialogo.setLayout(layout)
+
+      
+        dialogo.exec()
 
     def  llenarhistorial(self):
         pass
-   
+
+    def volver_al_menu(self):
+        self.registro.close()  
+        self.baset.close()  
+        self.historial.close()
+        self.historialf.close()
+        self.historialv.close()
+        self.historiale.close()
+        self.main.show()  
       
 
 
